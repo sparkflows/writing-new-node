@@ -3,46 +3,13 @@
 This repo contains the following:
 
 * fire jar
-* fire-server jar
-* fire-ui jar
-* properties file for configuring
-* run script to start the server
 * this README file which provides details on configuring and running the server
 * example workflows and data which you can start using immediately
 
-# Running Fire UI from the command line
-
-* Create a directory called fire-ui : **mkdir fire-ui**
-
-* Copy the fire-ui jar file into it : **fire-ui-1.0.0-SNAPSHOT.jar**
-* Copy the fire-server jar file into it : **fire-server-1.0-SNAPSHOT.jar**
-
-* Copy the nodes directory into it
-* Copy the data directory into it
-
-* Create a application.properties file in it with the following content:
-
-	* nodesDir=nodes
-	* clusterMode=false
-	* fireJar=/...../fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar
-	* server=localhost
-	* host=localhost
-	* port=9999
-
-* Start the **fire-server** with the command below
-	* **java -cp target/fire-server-1.0-SNAPSHOT.jar org.fireprojects.server.FireServer 4444 ./fire-server-logs**
-
-* Start the **fire-ui** with the command below
-	* **java -server -Xmx1548m -Xms1356m -XX:+CMSClassUnloadingEnabled -XX:PermSize=512m -XX:MaxPermSize=512m -jar fire-ui-1.0.0-SNAPSHOT.jar** 
-	* **1548m** means we are giving 1.5G to the process. Increase it based on the memory on your machine.
-
-* Go to **machine-url:8080** on your browser
-
 Below is the directory structure of the files mentioned above.
 
-* .../fire-ui/
-	* fire-ui-1.0.0-SNAPSHOT.jar
-	* fire-server-1.0-SNAPSHOT.jar
+* .../fire-examples/
+	* fire-core-1.0.0.jar
 	* application.properties
 	* nodes/
 	* data/
@@ -55,7 +22,7 @@ Below is the directory structure of the files mentioned above.
 
 Fire examples depends on the Fire jar file. Use the below commands to install the fire jar in your local maven repo.
 
-    mvn install:install-file -Dfile=fire-core-1.2.0-SNAPSHOT.jar -DgroupId=fire  -DartifactId=fire-core  -Dversion=1.2.0-SNAPSHOT -Dpackaging=jar
+    mvn install:install-file -Dfile=fire-core-1.0.0.jar -DgroupId=fire  -DartifactId=fire-core  -Dversion=1.0.0 -Dpackaging=jar
     
     
     
