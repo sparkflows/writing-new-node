@@ -28,7 +28,7 @@ Fire examples depends on the Fire jar file. Use the below commands to install th
     
 ### Build with Maven
 
-    mvn package -DskipTests
+    mvn package
     
 ## Developing with IntelliJ
 
