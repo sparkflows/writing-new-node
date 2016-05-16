@@ -80,6 +80,10 @@ Building this repo generates:
 	Add the fire-examples-1.0.0.jar to fire-lib directory
 	Create and add the node json to nodes/examples
 	Restart fire-ui
+	Include fire-examples-1.0.0.jar for the workflows where it is needed
+
+	Create an uber jar with fire-jar and your example nodes
+
 	
 
 
