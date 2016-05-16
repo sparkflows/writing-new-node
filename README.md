@@ -67,7 +67,13 @@ This repo has an example Node : fire.examples.node.NodeTestPrintFirstNRows
 
 Building this repo generates:
 
-	taget/fire-examples-1.0.0.jar
+	target/fire-examples-1.0.0.jar
+	target/fire-examples-1.0.0-jar-with-dependencies.jar
 
+## Create a Java/Scala workflow and run it
+
+	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster localhost:8080 1 data/workflows/kmeans.wf
+	
+	
 
 
