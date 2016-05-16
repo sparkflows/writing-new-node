@@ -1,4 +1,4 @@
-# fire-deployment
+# fire-examples
 
 This repo contains the following:
 
