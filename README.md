@@ -9,10 +9,8 @@ This repo contains the following:
 Below is the directory structure of the files mentioned above.
 
 * .../fire-examples/
-	* fire-core-1.0.0.jar
-	* application.properties
-	* nodes/
-	* data/
+	* fire-core-1.0.0.jar : fire core jar which contains the fire Nodes and Workflow engine
+	* data/ : sample data files
 
 
 
