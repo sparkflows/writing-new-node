@@ -6,7 +6,7 @@
   <name>FireExamples</name>
   <description>Fire examples</description>
   <version>1.0.0</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <developers>
     <developer>
@@ -40,6 +40,12 @@
   </repositories>
 
   <dependencies>
+
+    <dependency>
+	<groupId>fire</groupId>
+	<artifactId>fire-core</artifactId>
+	<version>1.0.0</version>
+    </dependency>
 
     <dependency>
       <groupId>com.google.code.gson</groupId>
