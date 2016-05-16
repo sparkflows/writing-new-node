@@ -50,17 +50,17 @@ Below are commands to run the various example Workflows on a Spark cluster.
 
 4 executors with 2G and 3 vcores each have been specified in the commands. The parameter **'cluster'** specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to **'local'** or not specifying it.
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowKMeans --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowKMeans --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowLinearRegression --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowLinearRegression --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowLogisticRegression --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowLogisticRegression --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowParquet --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowParquet --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar cluster localhost:8080 1 data/workflows/kmeans.wf
+	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster localhost:8080 1 data/workflows/kmeans.wf
 
-	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromJson --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.2.0-SNAPSHOT-jar-with-dependencies.jar cluster localhost:8080 1 <wf_json>
+	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromJson --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster localhost:8080 1 <wf_json>
 
 
 
