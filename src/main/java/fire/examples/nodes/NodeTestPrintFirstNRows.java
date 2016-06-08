@@ -25,7 +25,7 @@ public class NodeTestPrintFirstNRows extends Node {
     }
 
     @Override
-    public void execute(JobContext jobContext) {
+    public void execute(JobContext jobContext) throws Exception {
 
         // get the first n rows
         Row[] rows = dataFrame.take(n);
