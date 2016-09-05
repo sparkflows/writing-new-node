@@ -11,7 +11,8 @@ Below is the directory structure of the files mentioned above.
 * .../fire-examples/
 	* fire-core-1.2.0.jar : fire core jar which contains the fire Nodes and Workflow engine
 	* data/ : sample data files
-	* workflows/ : sample workflows
+	* datasets/ : contains dataset json file capturing the schema of the data
+	* workflows/ : contains sample workflow json file for various workflows
 
 
 
