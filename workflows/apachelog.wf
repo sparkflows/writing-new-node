@@ -1,0 +1,15 @@
+[ "fire.workflowengine.Workflow", {
+  "nodes" : [ "java.util.ArrayList", [ [ "fire.nodes.logs.NodeApacheFileAccessLog", {
+    "id" : 1,
+    "name" : "ApacheLogs",
+    "path" : "data/apacheaccesslog.log"
+  } ], [ "fire.nodes.util.NodePrintFirstNRows", {
+    "id" : 2,
+    "name" : "PrintNRows",
+    "n" : 3
+  } ] ] ],
+  "edges" : [ "java.util.ArrayList", [ [ "fire.workflowengine.Edge", {
+    "from" : 1,
+    "to" : 2
+  } ] ] ]
+} ]

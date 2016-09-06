@@ -1,0 +1,117 @@
+                [
+  "fire.workflowengine.Workflow",
+  {
+    "nodes": [
+      "java.util.ArrayList",
+      [
+        [
+          "fire.nodes.dataset.NodeDatasetStructured",
+          {
+            "id": 1,
+            "name": "DatasetStructured",
+            "path": "data/cars.csv",
+            "datasetType": "CSV",
+            "separator": ",",
+            "filterLinesContaining": null,
+            "header": true,
+            "schema": [
+              "fire.workflowengine.FireSchema",
+              {
+                "columnNames": [
+                  "c1",
+                  "c2",
+                  "c3",
+                  "c4"
+                ],
+                "columnTypes": [
+                  "DOUBLE",
+                  "DOUBLE",
+                  "DOUBLE",
+                  "DOUBLE"
+                ],
+                "columnFormats": [],
+                "columnMLTypes": [
+                  "NUMERIC",
+                  "NUMERIC",
+                  "NUMERIC",
+                  "NUMERIC"
+                ]
+              }
+            ],
+            "database": null,
+            "table": null
+          }
+        ],
+        [
+          "fire.nodes.util.NodePrintFirstNRows",
+          {
+            "id": 3,
+            "name": "PrintNRows",
+            "n": 3
+          }
+        ],
+        [
+          "fire.nodes.ml.NodeVectorAssembler",
+          {
+            "id": 5,
+            "name": "VectorAssembler",
+            "inputCols": [
+              "c1",
+              "c2",
+              "c3",
+              "c4"
+            ],
+            "outputCol": "features"
+          }
+        ],
+        [
+          "fire.nodes.ml.NodeKMeans",
+          {
+            "id": 6,
+            "name": "KMeans",
+            "featuresCol": "features",
+            "k": 2,
+            "maxIter": 20,
+            "predictionCol": "",
+            "seed": null,
+            "tol": 0.0001,
+            "initMode": "k-means||",
+            "initSteps": "5"
+          }
+        ]
+      ]
+    ],
+    "edges": [
+      "java.util.ArrayList",
+      [
+        [
+          "fire.workflowengine.Edge",
+          {
+            "id": 0,
+            "from": 1,
+            "to": 3
+          }
+        ],
+        [
+          "fire.workflowengine.Edge",
+          {
+            "id": 0,
+            "from": 1,
+            "to": 5
+          }
+        ],
+        [
+          "fire.workflowengine.Edge",
+          {
+            "id": 0,
+            "from": 5,
+            "to": 6
+          }
+        ]
+      ]
+    ],
+    "databricksWorkflow": false,
+    "streamingWorkflow": false
+  }
+]
+                

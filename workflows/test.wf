@@ -1,0 +1,53 @@
+[ "fire.workflowengine.Workflow", {
+  "nodes" : [ "java.util.ArrayList", [ [ "fire.nodes.dataset.NodeDatasetStructured", {
+    "id" : 1,
+    "name" : "DatasetStructured",
+    "path" : "data/ratings.csv",
+    "datasetType" : "CSV",
+    "separator" : ",",
+    "filterLinesContaining" : null,
+    "schema" : [ "fire.workflowengine.FireSchema", {
+      "columnNames" : [ "user", "movie", "rating", "ts" ],
+      "columnTypes" : [ "DOUBLE", "DOUBLE", "DOUBLE", "STRING" ],
+      "columnFormats" : [ ],
+      "columnMLTypes" : [ "NUMERIC", "NUMERIC", "TEXT", "TEXT" ]
+    } ],
+    "database" : null,
+    "table" : null
+  } ], [ "fire.nodes.etl.NodeUnionAll", {
+    "id" : 2,
+    "name" : "UnionAll"
+  } ], [ "fire.nodes.util.NodePrintFirstNRows", {
+    "id" : 3,
+    "name" : "PrintNRows",
+    "n" : 3
+  } ], [ "fire.nodes.dataset.NodeDatasetStructured", {
+    "id" : 4,
+    "name" : "DatasetStructured",
+    "path" : "data/datetimesample.csv",
+    "datasetType" : "CSV",
+    "separator" : "\\t",
+    "filterLinesContaining" : null,
+    "schema" : [ "fire.workflowengine.FireSchema", {
+      "columnNames" : [ "id", "trans_dt", "val" ],
+      "columnTypes" : [ "INTEGER", "STRING", "DOUBLE" ],
+      "columnFormats" : [ "", "", "" ],
+      "columnMLTypes" : [ "NUMERIC", "TEXT", "NUMERIC" ]
+    } ],
+    "database" : null,
+    "table" : null
+  } ] ] ],
+  "edges" : [ "java.util.ArrayList", [ [ "fire.workflowengine.Edge", {
+    "id" : 0,
+    "from" : 4,
+    "to" : 2
+  } ], [ "fire.workflowengine.Edge", {
+    "id" : 0,
+    "from" : 1,
+    "to" : 2
+  } ], [ "fire.workflowengine.Edge", {
+    "id" : 0,
+    "from" : 2,
+    "to" : 3
+  } ] ] ]
+} ]

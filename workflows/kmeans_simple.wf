@@ -1,0 +1,11 @@
+{"workflow": {
+    "name": "kmeans",
+    "nodes": [
+        { "id": "1", "type": "csv", "csv.directory": "/test", "csv.delimiter": "," },
+        { "id": "2", "type": "kmeans", "kmeans.num_clusters" : 5, "kmeans.max_iter" : 4}
+    ],
+
+    "edges" : [
+        { "source" : "1", "target" : "2" }
+    }
+}}
