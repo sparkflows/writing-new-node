@@ -58,8 +58,6 @@ Executors with 1G and 1 vcore each have been specified in the commands. The para
 
 	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar localhost:8080 1 workflows/kmeans.wf
 
-	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromJson --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster localhost:8080 1 <wf_json>
-
 
 ## Building and Deploying example Nodes
 
