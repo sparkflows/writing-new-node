@@ -12,7 +12,7 @@ Below is the directory structure of the files mentioned above.
 	* fire-core-1.2.0.jar : fire core jar which contains the fire Nodes and Workflow engine
 	* data/ : sample data files
 	* datasets/ : contains dataset json file capturing the schema of the data
-	* workflows/ : contains sample workflow json file for various workflows
+	* workflows-spark/ : contains sample workflow json file for various workflows
 
 
 
@@ -56,7 +56,7 @@ Executors with 1G and 1 vcore each have been specified in the commands. The para
 
 	spark-submit --class fire.examples.workflow.ml.WorkflowLogisticRegression --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar localhost:8080 --job-id 1 --workflow-file workflows/kmeans.json
+	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar localhost:8080 --job-id 1 --workflow-file workflows-spark/kmeans.json
 
 ## Building and Deploying example Nodes
 
@@ -69,7 +69,7 @@ Building this repo generates:
 
 ## Create a Java/Scala workflow and run it from the command line
 
-	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster localhost:8080 1 data/workflows/kmeans.wf
+	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster localhost:8080 1 workflows-spark/kmeans.wf
 	
 	
 ## Display the example Node in fire-ui and run it from there
