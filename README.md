@@ -70,6 +70,8 @@ Building this repo generates:
 	target/fire-examples-1.0.0.jar
 	target/fire-examples-1.0.0-jar-with-dependencies.jar
 
+The details for writing a New Node is here : https://github.com/sparkflows/fire-examples/blob/master/CreatingNewNodes.md
+
 ## Run a Java/Scala json workflow from the command line
 
 	The workflow can be created from the Sparkflows user interface. Each workflow has a json representation.
