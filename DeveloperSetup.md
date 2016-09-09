@@ -1,12 +1,6 @@
 # Developer Setup
 
-Fire is mainly written in Java and a bit in Scala. It uses maven. The parent pom has 2 modules at this time:
-
-* core
-* examples
-
-The number of modules would grow over time with things like customer 360, recommendations, various verticals etc.
-getting added.
+Sparkflows is mainly written in Java and a bit in Scala. It uses maven.
 
 ## Prerequisites
 
@@ -14,11 +8,11 @@ Please make sure you have Java, Maven and git installed in your development envi
 
 ## Spark Version
 
-The current pom.xml uses Spark 1.5 which is part of Cloudera CDH 5.5 distribution.
+The current pom.xml uses Spark 1.6 which is part of Cloudera CDH 5.7 distribution.
 
 ## Checking out the code with Git
 
-	git clone https://github.com/FireProjects/fire.git
+	git clone https://github.com/sparkflows/fire-examples.git
 
 
 ## Building with maven
@@ -76,3 +70,5 @@ Executor memory of 2G, 4 executors with 2G each has been specified in the comman
 	spark-submit --class fire.examples.workflow.save.WorkflowParquet --master yarn-client --executor-memory 2G  --num-executors 4  --executor-cores 3  examples/target/fire-examples-1.3.0-SNAPSHOT-jar-with-dependencies.jar cluster
 
 The full list of example Workflows is documented here : https://github.com/FireProjects/fire/blob/master/docs/RunningExampleWorkflowsOnHadoopCluster.md
+
+
