@@ -32,13 +32,16 @@ Fire examples depends on the Fire jar file. Use the below commands to install th
     
 ## Developing with IntelliJ
 
+IntelliJ can be downloaded from https://www.jetbrains.com/idea/
+
+    Add the scala plugin into IntelliJ.
     Import fire-examples as a Maven project into IntelliJ.
 
 ## Developing with Eclipse
 
-    Import fire-examples as a Maven project into Eclipse.
-    
+Scala IDE for Eclipse can be downloaded from http://scala-ide.org/
 
+    Import fire-examples as a Maven project into Eclipse.
 
 # Running the example workflows on a Spark Cluster
 
