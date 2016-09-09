@@ -53,13 +53,13 @@ Below are commands to run the various example Workflows on a Spark cluster.
 
 Executors with 1G and 1 vcore each have been specified in the commands. The parameter **'cluster'** specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to **'local'** or not specifying it.
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowKMeans --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowKMeans --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowLinearRegression --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowLinearRegression --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowLogisticRegression --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.ml.WorkflowLogisticRegression --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar cluster
 
-	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar localhost:8080 --job-id 1 --workflow-file workflows-spark/kmeans.json
+	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar localhost:8080 --job-id 1 --workflow-file workflows-spark/kmeans.json
 
 ## Building and Deploying example Nodes
 
@@ -67,8 +67,8 @@ This repo has an example Node : fire.examples.node.NodeTestPrintFirstNRows
 
 Building this repo generates:
 
-	target/fire-examples-1.0.0.jar
-	target/fire-examples-1.0.0-jar-with-dependencies.jar
+	target/fire-examples-1.2.0.jar
+	target/fire-examples-1.2.0-jar-with-dependencies.jar
 
 The details for writing a New Node is here : https://github.com/sparkflows/fire-examples/blob/master/CreatingNewNodes.md
 
@@ -78,15 +78,15 @@ The details for writing a New Node is here : https://github.com/sparkflows/fire-
 
 	Below, the workflows is workflows-spark/kmeans.wf
 
-	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.0.0-jar-with-dependencies.jar --workflow-file workflows-spark/kmeans.wf
+	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar --workflow-file workflows-spark/kmeans.wf
 
 	
 ## Display the example Node in fire-ui and run it from there
 
-	Add the fire-examples-1.0.0.jar to fire-lib directory
+	Add the fire-examples-1.2.0.jar to fire-lib directory
 	Create and add the node json to nodes/examples
 	Restart fire-ui
-	Include fire-examples-1.0.0.jar for the workflows where it is needed
+	Include fire-examples-1.2.0.jar for the workflows where it is needed
 
 	Create an uber jar with fire-jar and your example nodes
 
