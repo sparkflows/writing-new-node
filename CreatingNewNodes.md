@@ -7,9 +7,7 @@ New Nodes can be easily added for adding new functionality.
 * Check out the various groups of Nodes at https://github.com/FireProjects/fire/tree/master/core/src/main/java/fire/nodes
 
 * Some examples of various Nodes:
-    * Read in Parquet Files : https://github.com/FireProjects/fire/blob/master/core/src/main/java/fire/nodes/dataset/NodeDatasetFileOrDirectoryParquet.java
-    * LinearRegression : https://github.com/FireProjects/fire/blob/master/core/src/main/java/fire/nodes/ml/NodeLinearRegression.java
-    * Join : https://github.com/FireProjects/fire/blob/master/core/src/main/java/fire/nodes/etl/NodeJoin.java
+    * https://github.com/sparkflows/fire-examples/blob/master/src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
 
 ## Spark DataFrames
 
