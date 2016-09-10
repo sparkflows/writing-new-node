@@ -90,12 +90,14 @@ Below, the workflow is workflows-spark/kmeans.wf
 	
 ## Display the example Node in fire-ui and run it from there
 
-	Add the fire-examples-1.2.0.jar to fire-lib directory
-	Create and add the node json to nodes/examples
-	Restart fire-ui
-	Include fire-examples-1.2.0.jar for the workflows where it is needed
+New nodes written can be made visible in the Sparkflows UI. Thus, the users can start using immediately.
 
-	Create an uber jar with fire-jar and your example nodes
+	* Add the fire-examples-1.2.0.jar to fire-lib directory
+	* Create and add the node json to nodes/examples
+	* Restart fire-ui
+	* Include fire-examples-1.2.0.jar for the workflows where it is needed
+
+	* Create an uber jar with fire-jar and your example nodes
 
 	
 
