@@ -2,7 +2,7 @@
 
 This repo contains the following:
 
-* fire jar
+* fire core jar file
 * this README file which provides details on configuring and running the server
 * example workflows and data which you can start using immediately
 
