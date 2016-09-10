@@ -81,9 +81,9 @@ The details for writing a New Node is here : https://github.com/sparkflows/fire-
 
 ## Run a Java/Scala json workflow from the command line
 
-	The workflow can be created from the Sparkflows user interface. Each workflow has a json representation.
+The workflow can be created from the Sparkflows user interface. Each workflow has a json representation.
 
-	Below, the workflows is workflows-spark/kmeans.wf
+Below, the workflow is workflows-spark/kmeans.wf
 
 	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar --workflow-file workflows-spark/kmeans.wf
 
