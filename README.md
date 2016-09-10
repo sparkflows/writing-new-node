@@ -1,10 +1,16 @@
 # fire-examples
 
+This repository contains a sample node based on which new nodes can be created. It also contains published datasets and workflows to be used in Sparkflows.
+
+## Contents
+
 This repo contains the following:
 
 * fire core jar file
 * this README file which provides details on configuring and running the server
 * example workflows and data which you can start using immediately
+
+## Directory Structure
 
 Below is the directory structure of the files mentioned above.
 
