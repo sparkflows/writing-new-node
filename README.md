@@ -15,11 +15,8 @@ This repo contains the following:
 Below is the directory structure of the files mentioned above.
 
 * .../fire-examples/
-	* fire-core-1.2.0.jar : fire core jar which contains the fire Nodes and Workflow engine
+	* fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
 	* data/ : sample data files
-	* datasets/ : contains dataset json file capturing the schema of the data
-	* workflows-spark/ : contains sample workflows json to be executed with spark-submit
-	* workflows-ui/ : contains sample workflows json to be imported into the Sparkflows UI
 
 
 
@@ -29,7 +26,7 @@ Below is the directory structure of the files mentioned above.
 
 Fire examples depends on the Fire jar file. Use the below commands to install the fire jar in your local maven repo.
 
-    mvn install:install-file -Dfile=fire-core-1.2.0.jar -DgroupId=fire  -DartifactId=fire-core  -Dversion=1.2.0 -Dpackaging=jar
+    mvn install:install-file -Dfile=fire-core-1.3.0.jar -DgroupId=fire  -DartifactId=fire-core  -Dversion=1.3.0 -Dpackaging=jar
     
     
     
