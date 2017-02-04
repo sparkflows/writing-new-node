@@ -90,7 +90,7 @@ New nodes written can be made visible in the Sparkflows UI. Thus, the users can 
 	* Add the writing-new-node-1.3.0.jar to user-lib directory
 	* Create and add the node json to nodes/examples
 	* Restart fire-ui
-	* Include fire-examples-1.2.0.jar for the workflows where it is needed
+	* Include writing-new-node-1.3.0.jar for the workflows where it is needed
 	* Create an uber jar with fire-jar and your example nodes
 
 	
