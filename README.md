@@ -78,11 +78,11 @@ Below, the workflow is workflows-spark/kmeans.wf
 
 New nodes written can be made visible in the Sparkflows UI. Thus, the users can start using them immediately.
 
-	* Add the writing-new-node-1.3.0.jar to user-lib directory
-	* Create and add the node json to nodes/examples
-	* Restart fire-ui
-	* Include writing-new-node-1.3.0.jar for the workflows where it is needed
-	* Create an uber jar with fire-jar and your example nodes
+* Copy the writing-new-node-1.3.0.jar to user-lib directory of the sparkflows install
+* Create and add the node json to nodes/newnode
+* Restart fire-ui
+* Include writing-new-node-1.3.0.jar for the workflows where it is needed
+
 
 	
 
