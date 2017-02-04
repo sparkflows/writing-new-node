@@ -14,12 +14,12 @@ This repo contains the following:
 
 Below is the contents of the directory.
 
-    * fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
-    * data/ : sample data files
-    * src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
-    * src/main/java/fire/examples/workflow/WorkflowTest.java
-    * pom.xml
-    * README.md
+* fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
+* data/ : sample data files
+* src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
+* src/main/java/fire/examples/workflow/WorkflowTest.java
+* pom.xml
+* README.md
 
 ## Building
 
