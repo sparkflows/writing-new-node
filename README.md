@@ -50,7 +50,7 @@ Scala IDE for Eclipse can be downloaded from http://scala-ide.org/
 
     Import fire-examples as a Maven project into Eclipse.
 
-# Running the example workflows on a Spark Cluster
+# Running the workflow on a Spark Cluster
 
 Use the command below to load example data onto HDFS. It is then used by the example Workflows.
 
@@ -60,7 +60,7 @@ Below is the command to execute the example Workflow on a Spark cluster.
 
 Executors with 1G and 1 vcore each have been specified in the commands. The parameter **'cluster'** specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to **'local'** or not specifying it.
 
-	spark-submit --class fire.examples.workflow.ml.WorkflowKMeans --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar cluster
+	spark-submit --class fire.examples.workflow.WorkflowTest --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/writing-new-node-1.3.0-jar-with-dependencies.jar cluster
 
 
 ## Building and Deploying example Node
