@@ -10,17 +10,16 @@ This repo contains the following:
 * this README file which provides details on configuring and running the server
 * an example node which can be run in Sparkflows
 
-## Directory Structure
+## Directory Contents
 
-Below is the directory structure of the files mentioned above.
+Below is the contents of the directory.
 
-* .../writing-new-node/
-	* fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
-	* data/ : sample data files
-	* src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
-	* src/main/java/fire/examples/workflow/WorkflowTest.java
-	* pom.xml
-	* README.md
+    * fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
+    * data/ : sample data files
+    * src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
+    * src/main/java/fire/examples/workflow/WorkflowTest.java
+    * pom.xml
+    * README.md
 
 ## Building
 
