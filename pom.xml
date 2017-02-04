@@ -1,10 +1,10 @@
 
 <project>
   <groupId>fire</groupId>
-  <artifactId>fire-examples</artifactId>
+  <artifactId>writing-new-node</artifactId>
   <modelVersion>4.0.0</modelVersion>
-  <name>FireExamples</name>
-  <description>Fire examples</description>
+  <name>WritingNewNode</name>
+  <description>Writing a new node in Sparkflows</description>
   <version>1.3.0</version>
   <packaging>jar</packaging>
 
