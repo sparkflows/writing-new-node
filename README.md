@@ -19,7 +19,9 @@ Below is the contents of the directory.
 * data
     * sample data files
 * src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
+    * example node
 * src/main/java/fire/examples/workflow/WorkflowTest.java
+    * example workflow
 * pom.xml
 * README.md
 
