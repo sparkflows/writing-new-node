@@ -1,4 +1,4 @@
-# fire-examples
+# writing-new-node
 
 This repository contains a sample node based on which new nodes can be created.
 
@@ -18,8 +18,6 @@ Below is the directory structure of the files mentioned above.
 	* fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
 	* data/ : sample data files
 
-
-
 ## Building
 
 ### Install the Fire jar to the local maven repository
@@ -27,8 +25,6 @@ Below is the directory structure of the files mentioned above.
 Writing new Node depends on the Fire jar file. Use the below commands to install the fire jar in your local maven repo.
 
     mvn install:install-file -Dfile=fire-core-1.3.0.jar -DgroupId=fire  -DartifactId=fire-core  -Dversion=1.3.0 -Dpackaging=jar
-    
-    
     
 ### Build with Maven
 
