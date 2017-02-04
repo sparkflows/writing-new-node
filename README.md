@@ -1,14 +1,6 @@
 # writing-new-node
 
-This repository contains a sample node based on which new nodes can be created.
-
-## Contents
-
-This repo contains the following:
-
-* fire core jar file
-* this README file which provides details on configuring and running the server
-* an example node which can be run in Sparkflows
+This repository contains a sample Node based on which new nodes can be created. This Node can be placed in the sparkflows web server and executed.
 
 ## Directory Contents
 
@@ -21,15 +13,16 @@ Below is the contents of the directory.
 * src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
     * example node
 * src/main/java/fire/examples/workflow/WorkflowTest.java
-    * example workflow
+    * example workflow which uses the node NodeTestPrintFirstNRows and executes it
 * pom.xml
 * README.md
+    * this README file which provides the steps of execution.
 
 ## Building
 
 ### Install the Fire jar to the local maven repository
 
-Writing new Node depends on the Fire jar file. Use the below commands to install the fire jar in your local maven repo.
+Writing new Node depends on the Fire jar file. The Fire jar file provides the parent class for any new Node. Use the below commands to install the fire jar in your local maven repo.
 
     mvn install:install-file -Dfile=fire-core-1.3.0.jar -DgroupId=fire  -DartifactId=fire-core  -Dversion=1.3.0 -Dpackaging=jar
     
@@ -52,7 +45,7 @@ Scala IDE for Eclipse can be downloaded from http://scala-ide.org/
 
 # Running the workflow on a Spark Cluster
 
-Use the command below to load example data onto HDFS. It is then used by the example Workflows.
+Use the command below to load example data onto HDFS. It is then used by the example Workflow.
 
 	hadoop fs -put data
 
@@ -63,16 +56,14 @@ Executors with 1G and 1 vcore each have been specified in the commands. The para
 	spark-submit --class fire.examples.workflow.WorkflowTest --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/writing-new-node-1.3.0-jar-with-dependencies.jar cluster
 
 
-## Building and Deploying example Node
+## Jar files
 
-This repo has an example Node : fire.examples.node.NodeTestPrintFirstNRows
-
-Building this repo generates:
+Building this repo generates the following jar files:
 
 	target/writing-new-node-1.3.0.jar
 	target/writing-new-node-1.3.0-jar-with-dependencies.jar
 
-The details for writing a New Node is here : https://github.com/sparkflows/writing-new-node/blob/master/CreatingNewNodes.md
+The details for coding a New Node is here : https://github.com/sparkflows/writing-new-node/blob/master/CreatingNewNodes.md
 
 ## Run a Java/Scala json workflow from the command line
 
