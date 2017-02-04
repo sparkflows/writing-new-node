@@ -19,6 +19,8 @@ Below is the directory structure of the files mentioned above.
 	* data/ : sample data files
 	* src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
 	* src/main/java/fire/examples/workflow/WorkflowTest.java
+	* pom.xml
+	* README.md
 
 ## Building
 
