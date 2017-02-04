@@ -17,6 +17,8 @@ Below is the directory structure of the files mentioned above.
 * .../writing-new-node/
 	* fire-core-1.3.0.jar : fire core jar which contains the fire Nodes and Workflow engine
 	* data/ : sample data files
+	* src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
+	* src/main/java/fire/examples/workflow/WorkflowTest.java
 
 ## Building
 
