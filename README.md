@@ -6,23 +6,24 @@ This repository contains a sample Node based on which new nodes can be created. 
 
 Below is the contents of the directory.
 
-* fire-core-1.4.0.jar
+* **fire-core-1.4.0.jar**
     * fire core jar which contains the fire Nodes and Workflow engine
-* data
+* **data**
     * sample data files
-* src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java
-    * example node
-* src/main/java/fire/examples/workflow/WorkflowTest.java
+* **src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java**
+    * example new node
+* **src/main/java/fire/examples/workflow/WorkflowTest.java**
     * example workflow which uses the node NodeTestPrintFirstNRows and executes it
-* pom.xml
-* README.md
+* **pom.xml**
+    * Maven pom.xml used to build this new node
+* **README.md**
     * this README file which provides the steps of execution.
 
 ## Building
 
 ### Check out the code
 
-Check out the code with : git clone https://github.com/sparkflows/writing-new-node.git
+Check out the code with : **git clone https://github.com/sparkflows/writing-new-node.git**
 
 ### Install the Fire jar to the local maven repository
 
@@ -41,7 +42,7 @@ IntelliJ can be downloaded from https://www.jetbrains.com/idea/
     Add the scala plugin into IntelliJ.
     Import writing-new-node as a Maven project into IntelliJ.
 
-## Developing with Eclipse
+## Developing with Scala IDE for Eclipse
 
 Scala IDE for Eclipse can be downloaded from http://scala-ide.org/
 
@@ -74,10 +75,10 @@ The details for coding a New Node is here : https://github.com/sparkflows/writin
 
 New nodes written can be made visible in the Sparkflows UI. Thus, the users can start using them immediately.
 
-* Copy the writing-new-node-1.4.0-jar-with-dependencies.jar to user-lib directory of the sparkflows install
-* Copy testprintnrows.json to the nodes directory under sparkflows install
+* Copy the **writing-new-node-1.4.0-jar-with-dependencies.jar** to **user-lib** directory of the sparkflows install
+* Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
 * Restart fire-ui
-* TestPrintNRows node would now be visible in the workflow editor window and you can start using it.
+* **TestPrintNRows** node would now be visible in the workflow editor window and you can start using it.
 
 
 ## Run a Java/Scala json workflow from the command line
