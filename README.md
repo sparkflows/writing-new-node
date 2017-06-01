@@ -2,6 +2,10 @@
 
 This repository contains a sample Node based on which new nodes can be created. This Node can be placed in the sparkflows web server and executed.
 
+For more examples on nodes in Sparkflows, refer:
+
+- https://github.com/sparkflows/sparkflows-stanfordcorenlp
+
 ## Directory Contents
 
 Below is the contents of the directory.
@@ -11,7 +15,7 @@ Below is the contents of the directory.
 * **data**
     * sample data files
 * **src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java**
-    * example new node
+    * A new node for Sparkflows
 * **src/main/java/fire/examples/workflow/WorkflowTest.java**
     * example workflow which uses the node NodeTestPrintFirstNRows and executes it
 * **pom.xml**
