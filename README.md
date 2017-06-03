@@ -14,9 +14,9 @@ Below is the contents of the directory.
     * fire core jar which contains the fire Nodes and Workflow engine
 * **data**
     * sample data files
-* **src/main/java/fire/examples/nodes/NodeTestPrintFirstNRows.java**
+* **src/main/java/fire/nodes/examples/NodeTestPrintFirstNRows.java**
     * A new node for Sparkflows
-* **src/main/java/fire/examples/workflow/WorkflowTest.java**
+* **src/main/java/fire/workflows/examples/WorkflowTest.java**
     * example workflow which uses the node NodeTestPrintFirstNRows and executes it
 * **pom.xml**
     * Maven pom.xml used to build this new node
@@ -62,7 +62,7 @@ Below is the command to execute the example Workflow on a Spark cluster.
 
 Executors with 1G and 1 vcore each have been specified in the commands. The parameter **'cluster'** specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to **'local'** or not specifying it.
 
-	spark-submit --class fire.examples.workflow.WorkflowTest --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/writing-new-node-1.4.0-jar-with-dependencies.jar cluster
+	spark-submit --class fire.workflows.examples.WorkflowTest --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/writing-new-node-1.4.0-jar-with-dependencies.jar cluster
 
 
 ## Jar files
