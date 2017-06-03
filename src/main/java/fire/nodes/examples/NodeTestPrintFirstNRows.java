@@ -1,4 +1,4 @@
-package fire.examples.nodes;
+package fire.nodes.examples;
 
 import fire.context.JobContext;
 import fire.output.OutputTable;
