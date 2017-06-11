@@ -14,21 +14,21 @@
           }
         ],
         [
-          "fire.nodes.examples.NodeTestPrintFirstNRows",
-          {
-            "id": 2,
-            "name": "TestPrintNRows",
-            "n": 10
-          }
-        ],
-        [
           "fire.nodes.etl.NodeFieldSplitter",
           {
-            "id": 3,
+            "id": 2,
             "name": "FieldSplitter",
             "inputCol": "lines",
             "outputCols": "c1,c2,c3,c4",
             "sep": ","
+          }
+        ],
+        [
+          "fire.nodes.examples.NodeTestPrintFirstNRows",
+          {
+            "id": 3,
+            "name": "TestPrintNRows",
+            "n": 10
           }
         ]
       ]
@@ -41,15 +41,15 @@
           {
             "id": 0,
             "from": 1,
-            "to": 3
+            "to": 2
           }
         ],
         [
           "fire.workflowengine.Edge",
           {
             "id": 1,
-            "from": 3,
-            "to": 2
+            "from": 2,
+            "to": 3
           }
         ]
       ]
