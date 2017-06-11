@@ -1,0 +1,62 @@
+[
+  "fire.workflowengine.Workflow",
+  {
+    "nodes": [
+      "java.util.ArrayList",
+      [
+        [
+          "fire.nodes.dataset.NodeDatasetTextFiles",
+          {
+            "id": 1,
+            "name": "TextFiles",
+            "path": "data/cars.csv",
+            "outputCol": "lines"
+          }
+        ],
+        [
+          "fire.nodes.examples.NodeTestPrintFirstNRows",
+          {
+            "id": 2,
+            "name": "TestPrintNRows",
+            "n": 10
+          }
+        ],
+        [
+          "fire.nodes.etl.NodeFieldSplitter",
+          {
+            "id": 3,
+            "name": "FieldSplitter",
+            "inputCol": "lines",
+            "outputCols": "c1,c2,c3,c4",
+            "sep": ","
+          }
+        ]
+      ]
+    ],
+    "edges": [
+      "java.util.ArrayList",
+      [
+        [
+          "fire.workflowengine.Edge",
+          {
+            "id": 0,
+            "from": 1,
+            "to": 3
+          }
+        ],
+        [
+          "fire.workflowengine.Edge",
+          {
+            "id": 1,
+            "from": 3,
+            "to": 2
+          }
+        ]
+      ]
+    ],
+    "batchDurationInSeconds": 30,
+    "streamingWorkflow": false,
+    "databricksWorkflow": false
+  }
+]
+                        

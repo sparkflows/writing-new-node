@@ -79,7 +79,7 @@ The details for coding a New Node is here : https://github.com/sparkflows/writin
 
 New nodes written can be made visible in the Sparkflows UI. Thus, the users can start using them immediately.
 
-* Copy the **writing-new-node-1.4.0-jar-with-dependencies.jar** to **user-lib** directory of the sparkflows install
+* Copy the **writing-new-node-1.4.0.jar** to **fire-lib** directory of the sparkflows install
 * Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
 * Restart fire-ui
 * **TestPrintNRows** node would now be visible in the workflow editor window and you can start using it.
@@ -91,7 +91,7 @@ The workflow can be created from the Sparkflows user interface. Each workflow ha
 
 Below, the workflow is workflows-spark/kmeans.wf
 
-	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/fire-examples-1.2.0-jar-with-dependencies.jar --workflow-file workflows-spark/kmeans.wf
+	spark-submit --class fire.examples.workflow.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  --num-executors 1  --executor-cores 1  target/writing-new-node-1.4.0-jar-with-dependencies.jar --workflow-file ExampleWorkflow.json
 
 	
 
