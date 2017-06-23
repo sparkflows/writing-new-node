@@ -47,6 +47,18 @@
       <!-- <scope>provided</scope> -->
     </dependency>
 
+    <dependency> <!-- Spark dependency -->
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-repl_2.10</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+
+    <dependency> <!-- Spark dependency -->
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-hive_2.10</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+
   </dependencies>
 
 
