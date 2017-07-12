@@ -8,10 +8,10 @@ For more examples on nodes in Sparkflows, refer:
 
 # Spark 1.X / Spark 2.X
 
-This repo has a master branch and branch-2.x.
+This repo has a master branch and spark-2.x.
 
 - Master branch is for Spark 1.6.x
-- branch-2.x is for Spark 2.1.x
+- spark-2.x is for Spark 2.1.x
 
 
 ## Directory Contents
