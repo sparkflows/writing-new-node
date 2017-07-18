@@ -54,16 +54,9 @@ public class WorkflowTest {
         NodeColumnFilter filter = new NodeColumnFilter(2, "filter node", "f1 f2");
         wf.addLink(structured, filter);
 
-        // delete the output directory
-        Delete.deleteFile("parquet");
-
-        // save as parquet file
-        NodeSaveParquet save = new NodeSaveParquet(4, "save", "parquet");
-        wf.addLink(filter, save);
-
-        // print first 2 rows
-        NodePrintFirstNRows printFirstNRows = new NodePrintFirstNRows(3, "print first rows", 2);
-        wf.addLink(save, printFirstNRows);
+        // print first 10 rows
+        NodePrintFirstNRows printFirstNRows = new NodePrintFirstNRows(3, "print first rows", 10);
+        wf.addLink(filter, printFirstNRows);
 
         // execute the workflow
         wf.execute(jobContext);
