@@ -41,7 +41,7 @@ In some cases we need a field to be refreshed by custom code provided in a Proce
 - Selecting a database name from a given list. In this case the custom code in the Processor would be able to fetch the list of databases.
 - Selecting a table name from a given list.
 
-Below is the example of how the code in the Processor look like:
+Below is the example of how the code in the Node/Processor look like. It returns an array of Strings which get displayed in the dialog box as a drop down.
 
     @Override
     public ArrayList<String> getValue1d(String valueOf) {
