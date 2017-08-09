@@ -13,6 +13,7 @@ In the example, we see the following **widgets** used:
     - schema_col_formats
 
 
+```
 {
   "id": "11",
   "name": "CSV",
@@ -31,6 +32,7 @@ In the example, we see the following **widgets** used:
 
   ]
 }
+```
 
 ## Refreshing a field powered by custom code in a Processor
 
@@ -58,6 +60,7 @@ Below is the example of how the code in the Processor look like:
 
 The Processor JSON would look like below. For dbtable, we see the widget 'array_refresh' being used.
 
+```
 {
   "id": "11",
   "name": "JDBC",
@@ -78,5 +81,7 @@ The Processor JSON would look like below. For dbtable, we see the widget 'array_
     {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Column Formats", "description": "Output Column Formats"}
   ]
 }
+```
+
 
 
