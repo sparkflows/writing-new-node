@@ -2,15 +2,15 @@
 
 The Sparkflows UI allows specifying how the dialog box of any Processor would look like. Each Processor has a corresponding json file.
 
-Below is the example of 'NodeDataSetCSV'. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
+Below is the example of **'NodeDataSetCSV'**. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
 In the example, we see the following **widgets** used:
 
-- textfield : Allows the user to enter any text
-- array : Allows the user to select a value from a given list
+- **textfield** : Allows the user to enter any text
+- **array** : Allows the user to select a value from a given list
 - Below fields are used for capturing the output schema of the Processor
-    - schema_col_names
-    - schema_col_types
-    - schema_col_formats
+    - **schema_col_names**
+    - **schema_col_types**
+    - **schema_col_formats**
 
 
 ```
