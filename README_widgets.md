@@ -34,6 +34,15 @@ In the example, we see the following **widgets** used:
 }
 ```
 
+## Ability to Browse the HDFS
+
+There are cases when we need the ability to Browse the HDFS. For example when the user has to select a file or directory on HDFS. This is enabled by the below example:
+
+    {"name":"path", "value":"", "widget": "textfield", "title": "Path", "description": "Path of the Text file/directory"}
+
+In the above having **'title'** of **'Path'** displays the Browse HDFS button using which the user is presented with a Dialog Box to browse the data in HDFS.
+
+
 ## Refreshing a field powered by custom code in a Processor
 
 In some cases we need a field to be refreshed by custom code provided in a Processor. An example of it can be:
