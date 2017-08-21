@@ -132,6 +132,20 @@ You can:
 * check for the Class of each model using instanceof
 * Use the model objects of types you are interested in and process them appropriately
 
+## Passing any value from one Node to the Immediate Next Nodes
+
+There are cases when a value from one Node needs to be passed to the Immediate Next Nodes.
+
+Node has the ability to receive objects from the previous Nodes. It stores them in a HashMap.
+
+* public transient HashMap<String, Object> incomingValues = new HashMap<>();
+
+A Node can pass (name, value) to the immediate next nodes using the method below:
+
+* public void passValueToImmediateNextNodes(JobContext jobContext, String name, Object value)
+
+
+
 
 
 
