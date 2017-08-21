@@ -28,6 +28,8 @@ Below is the contents of the directory.
     * example workflow which uses the node NodeTestPrintFirstNRows and executes it
 * **pom.xml**
     * Maven pom.xml used to build this new node
+* **testprintnrows.json**
+    * JSON file for the example node **fire.nodes.examples.NodeTestPrintFirstNRows**
 * **README.md**
     * this README file which provides the steps of execution.
 
