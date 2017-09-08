@@ -18,7 +18,7 @@ Below is the Class Hierarchy of the Nodes
         - NodePredictor
           - NodeRandomForestClassifier
           - NodeLogisticRegression
-        - NodeKmeans
+        - NodeKMeans
     - NodeTransformer
        - NodeBucketizer
        - NodeHashingTF
