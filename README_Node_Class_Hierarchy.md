@@ -25,3 +25,11 @@ Below is the Class Hierarchy of the Nodes
   - NodeEvaluator
     - NodeRegressionEvaluator
     - NodeBinaryClassificationEvaluator
+    
+    
+    
+  The Class Hierarchy of the Spark Machine Learning Nodes resemble close to the corresponding Spark ML Classes.
+  
+  https://spark.apache.org/docs/2.1.0/api/java/org/apache/spark/ml/package-tree.html
+  
+  
