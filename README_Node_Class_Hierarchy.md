@@ -19,9 +19,9 @@ Below is the Class Hierarchy of the Nodes
           - NodeALS
           - NodeLogisticRegression
         - NodeKmeans
-        - NodeTransformer
-           - NodeBucketizer
-           - NodeHashingTF
+    - NodeTransformer
+       - NodeBucketizer
+       - NodeHashingTF
   - NodeEvaluator
     - NodeRegressionEvaluator
     - NodeBinaryClassificationEvaluator
