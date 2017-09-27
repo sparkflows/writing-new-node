@@ -1,6 +1,8 @@
-# writing-new-node
+# Overview
 
-This repository contains a sample Node based on which new nodes can be created. This Node can be placed in the sparkflows web server and executed.
+Sparkflows allows you to write your own Node/Operator in Spark/Java/Scala and plug them into Sparkflows. They appear within the Sparkflows library and users and easily use them.
+
+This repository contains a few sample Nodes based on which new nodes can be created. The jar file of the code can be placed in Sparkflows, workflows built and executed as a Spark Job.
 
 For more examples on nodes in Sparkflows, refer:
 
