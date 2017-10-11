@@ -18,12 +18,13 @@ This repo has a master branch and spark-2.x
 
 # Next Steps
 
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code_And_Build.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Developing_With_IntelliJ_Eclipse.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Class_Hierarchy.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_Machine_Learning_Nodes.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_widgets.md
-- https://github.com/sparkflows/writing-new-node/blob/master/docs/README_widgets.md
+- [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
+- [Checkout Code, Build and Run](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code_And_Build.md)
+- [Developing with IntelliJ/Scala IDE for Eclipse](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Developing_With_IntelliJ_Eclipse.md)
+- [Running Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
+- [Node Class Hierarchy](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Class_Hierarchy.md)
+- [Writing Machine Learning Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_Machine_Learning_Nodes.md)
+- [Widgets](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_widgets.md)
+- [Passing Value to Other Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Passing_Value_To_Other_Nodes.md)
+
 
