@@ -45,6 +45,8 @@ In the example, we see the following **widgets** used:
 | variables  | Allows the user to select one or more of the columns from the incoming schema  | {"name":"inputCols", "value":"[]", "widget": "variables", "title": "Input Columns", "description": "Input column of type - all numeric, boolean and vector", "datatypes":["integer", "long", "double", "float", "vectorudt"]} |
 | variables_map  | Display all the incoming variables in separate rows  | {"name": "inputCols", "value":"[]", "widget": "variables_map", "title": "Variable"} |
 | variables_map_edit  | Display a textfield next to the variable for the user to enter text values  | {"name": "hbaseColFamily", "value":"[]", "widget": "variables_map_edit", "title": "HBase Column Family", "description": "HBase Column Family for the variable"} |
+| variables_map_select  | Displays a dropdown for the user to select from the list of available variables  | {"name": "rhsCols", "value":"[]", "widget": "variables_map_select", "title": "RHS Variables", "description": "RHS columns for matching"} |
+| variables_map_array  | Allows the user to select a value from a list of available values, which are displayed in a dropdown  | {"name": "matchingAlgorithms", "value":"[]", "widget": "variables_map_array", "optionsArray": ["fullmatch", "levenshtein", "jarowinkler", "jaccard(3 gram)", "longestCommonSubsequence","notionalDistance","dateDifference"], "title": "Algorithm to use", "description": "Algorithm to use for matching" |
 | tab  | Creates a new tab in the dialog box. All items below it go into the new tab  | {"name": "gridSearch", "value":"", "widget": "tab", "title": "Grid Search"} |
 
 
