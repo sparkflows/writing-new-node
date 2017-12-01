@@ -1,6 +1,6 @@
 # Overview
 
-Sparkflows allows you to write your own Node/Operators in Spark/Java/Scala and plug them into Sparkflows. They appear within the Sparkflows library and users can easily use them.
+Sparkflows allows you to write your own Node/Operators in Spark/Java/Scala and plug them into Sparkflows. They appear within the Sparkflows Workflow Editor and users can easily use them.
 
 This repository contains a few sample Nodes based on which new nodes can be created. The jar file of the code can be placed in Sparkflows, workflows built and executed as a Spark Job.
 
