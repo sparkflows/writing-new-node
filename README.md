@@ -28,4 +28,9 @@ This repo has a master branch and spark-2.x
 - [Widgets](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_widgets.md)
 - [Passing Value to Other Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Passing_Value_To_Other_Nodes.md)
 
+# Workflow
+
+<img src="https://github.com/sparkflows/writing-new-node/blob/master/docs/images/workflow.png"/>
+
+
 
