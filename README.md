@@ -25,7 +25,7 @@ This repo has a master branch and spark-2.x
 - [Writing New Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_Nodes.md)
 - [Node Class Hierarchy](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Class_Hierarchy.md)
 - [Writing Machine Learning Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_Machine_Learning_Nodes.md)
-- [Processor/Node JSON & Widgets](https://github.com/sparkflows/writing-new-node/blob/master/docs/https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Processor_JSON.md)
+- [Processor/Node JSON & Widgets](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Processor_JSON.md)
 - [Passing Value to Other Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Passing_Value_To_Other_Nodes.md)
 
 # Workflow
