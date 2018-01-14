@@ -2,36 +2,29 @@
 
 The Fire UI allows specifying how the dialog box of any Processor would look like. Each Processor has a corresponding json file.
 
-Below is the example of **'NodeDataSetCSV'**. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
+Below is the example of **'NodeConcatColumns'**. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
 In the example, we see the following **widgets** used:
 
-- **textfield** : Allows the user to enter any text
-- **array** : Allows the user to select a value from a given list
-- Below fields are used for capturing the output schema of the Processor
-    - **schema_col_names**
-    - **schema_col_types**
-    - **schema_col_formats**
+- **variables** : Allows the user to select one more more variables from the incoming list of variables into the Node.
+- **textfield** : Allows the user to enter some text.
 
 
 ```
 {
-  "id": "11",
-  "name": "CSV",
-  "description": "Dataset Node for reading CSV files",
-  "type": "dataset",
-  "nodeClass": "fire.nodes.dataset.NodeDatasetCSV",
+  "id": "1",
+  "name": "NodeConcatColumns",
+  "description": "This node creates a new DataFrame by concatenating the specified columns of the input DataFrame",
+  "input" : "It accepts a DataFrame as input from the previous Node",
+  "output": "A new column is added to the incoming DataFrame by concatenating the specified columns. The new DataFrame is sent to the output of this Node.",
+  "type": "transform",
+  "nodeClass": "fire.nodes.etl.NodeConcatColumns",
   "fields" : [
-    {"name":"path", "value":"", "widget": "textfield", "title": "Path", "description": "Path of the Text file/directory"},
-    {"name":"separator", "value":",", "widget": "textfield", "title": "Separator", "description": "CSV Separator"},
-    {"name": "header", "value":"false", "widget": "array", "title": "Header", "optionsArray": ["true","false"],
-            "description": "Does the file have a header row", "datatypes":["boolean"]},
-
-    {"name":"outputColNames", "value":"[]", "widget": "schema_col_names", "title": "Column Names for the CSV", "description": "New Output Columns of the SQL"},
-    {"name":"outputColTypes", "value":"[]", "widget": "schema_col_types", "title": "Column Types for the CSV", "description": "Data Type of the Output Columns"},
-    {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Column Formats for the CSV", "description": "Format of the Output Columns"}
-
+    {"name":"inputCols", "value": "[]", "widget": "variables", "title": "Columns", "description": "Columns to be concatenated"},
+    {"name":"outputCol", "value": "", "widget": "textfield", "title": "Concatenated Column Name", "description": "Column name for the concatenated columns"},
+    {"name":"sep", "value": "|", "widget": "textfield", "title": "Separator", "description": "Separator to be used when concatenating the columns"}
   ]
 }
+
 ```
 
 ## Widget Types
