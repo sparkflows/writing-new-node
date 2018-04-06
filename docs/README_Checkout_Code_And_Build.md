@@ -44,6 +44,7 @@ New nodes written can be made visible in the Sparkflows UI. Thus, the users can 
 
 * Copy the **writing-new-node-2.1.0.jar** to **fire-lib** directory of the sparkflows install
 * Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
+* Restart fire
 * Restart fire-ui
 * **TestPrintNRows** node would now be visible in the workflow editor window and you can start using it.
 
