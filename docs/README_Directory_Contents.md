@@ -7,7 +7,7 @@ Below is the contents of the directory.
 * **data**
     * sample data files
 * **src/main/java/fire/nodes/examples**
-    * This directory contains example Nodes of various types
+    * code for example Nodes of various types
 * **src/main/java/fire/workflows/examples/WorkflowTest.java**
     * example workflow which uses the node NodeTestPrintFirstNRows and executes it
 * **pom.xml**
