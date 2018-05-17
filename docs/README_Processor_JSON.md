@@ -46,7 +46,10 @@ In the example, we see the following **widgets** used:
 | schema_col_formats  | Display the output schema format of the Node in a column  | {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Output Column Formats", "description": "Format of the Output Columns"} |
 | tab  | Creates a new tab in the dialog box. All items below it go into the new tab  | {"name": "gridSearch", "value":"", "widget": "tab", "title": "Grid Search"} |
 | key_array  | Allows the user to enter key value pairs  | {"name": "configs", "value":"[]", "widget": "key_array", "title": "Elastic Search Configs Key"} |    
-| value_array  | Allows the user to enter key value pairs  | {"name": "configs", "value":"[]", "widget": "value_array", "title": "Elastic Search Configs Value"} |    
+| value_array  | Allows the user to enter key value pairs  | {"name": "configs", "value":"[]", "widget": "value_array", "title": "Elastic Search Configs Value"} |  
+| variables_list_select  | Allows adding rows of values. Displays a dropdown of columns from which the user can select  | {"name": "inputCols", "value":"[]", "widget": "variables_list_select", "title": "Columns", "description": "Columns"} |
+| variables_list_array  | Display a dropdown of values  |  |
+| variables_list_edit  | Allows the user to enter an editable value  | {"name": "values", "value":"[]", "widget": "variables_list_edit", "title": "Values", "description": "Values"} |
 
 ## Ability to Browse the HDFS
 
