@@ -23,7 +23,7 @@ Building this repo generates the following jar files:
 
 The details for coding a New Node is here : https://github.com/sparkflows/writing-new-node/blob/master/CreatingNewNodes.md
 
-## Running the workfow locally
+### Running the workfow locally
 
 Use the command below to run the example workflow locally.
 
