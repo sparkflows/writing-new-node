@@ -8,9 +8,6 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 
-/**
- * Created by jayantshekhar on 5/15/16.
- */
 public class NodeTestPrintFirstNRows extends Node {
 
 

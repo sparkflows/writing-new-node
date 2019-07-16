@@ -28,9 +28,6 @@ import org.apache.spark.ml.tuning.ParamGridBuilder;
 
 import java.io.Serializable;
 
-/**
- * Created by jayantshekhar
- */
 public class NodeTestLogisticRegression extends NodePredictor implements Serializable {
 
     public String rawPredictionCol; // The raw prediction (a.k.a. confidence) column name

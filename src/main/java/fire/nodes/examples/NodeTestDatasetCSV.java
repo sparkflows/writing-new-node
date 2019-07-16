@@ -12,7 +12,6 @@ import org.apache.spark.sql.types.StructType;
 import java.io.Serializable;
 
 /**
- * Created by jayantshekhar
  *
  * Creates a DataFrame from a CSV file
  */
