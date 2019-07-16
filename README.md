@@ -1,8 +1,6 @@
 # Overview
 
-Fire Insights allows you to write your own Node/Processors in Spark/Java/Scala and plug them into Fire Insights. They appear within the Fire Insights Workflow Editor and users can use them like any other Processor.
-
-This repository contains a few sample Processors. New processors can be written similarly. The jar file for the new Processors can be placed in Fire and they can be used like any other Processor available in Fire.
+In Fire Insights, you can write your own processor in Spark, Java, or Scala, and plug them into Fire Insights. Once these processors are available made to Fire Insights via a jar file, they appear within the Fire Insights Workflow Editor. Users can use these new processors like any other processor within Fire Insights. This repository contains a few sample processors to get your started.
 
 For more examples on writing nodes in Sparkflows, refer:
 
