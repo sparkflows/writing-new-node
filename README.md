@@ -11,12 +11,12 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
   Step 1:  Check out from git - Just include checking out and installing jar/code
       - move content from Developing with IntelliJ/Scala IDE for Eclipse here
   Step 2: Copy " Directory Contents" and explain the contents
-  Step 3: Explain node hierarchy including a  hierarchy diagram 
+  Step 3: Explain node hierarchy including a hierarchy diagram 
   Step 4: Creating new node 
          - Creating new connectors node 
-            - Creating JSON  - show real JSON code in help 
-            - Creating node implementation - show real JSON code in help 
-            - Creating node rules - show real JSON code in help 
+            - Creating JSON  - show real JSON code in help - add more comments to code 
+            - Creating node implementation - show real JSON code in help - add more comments to code 
+            - Creating node rules - show real JSON code in help - add more comments to code 
          - Creating new processor node 
              - Follow same structure as connector node
          - Creating new Machine learning node 
