@@ -23,6 +23,25 @@ Building this repo generates the following jar files:
 
 The details for coding a New Node is here : https://github.com/sparkflows/writing-new-node/blob/master/CreatingNewNodes.md
 
+## Running the workfow locally
+
+Use the command below to run the example workflow locally.
+
+       java -cp target/writing-new-node-3.1.0-jar-with-dependencies.jar fire.workflows.examples.WorkflowTest
+
+It would finally print the following values.
+
+       DoubleType DoubleType StringType 
+       3.0 2.0 3.0|2.0 
+       1.1 1.0 1.1|1.0 
+       4.1 5.0 4.1|5.0 
+       3.1 6.0 3.1|6.0 
+       2.1 2.0 2.1|2.0 
+       2.3 3.0 2.3|3.0 
+       3.0 2.0 3.0|2.0 
+       1.1 1.0 1.1|1.0 
+       4.1 5.0 4.1|5.0 
+       3.1 6.0 3.1|6.0 
 
 ### Running the workflow on a Spark Cluster
 
