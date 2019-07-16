@@ -8,7 +8,7 @@ Check out the code with : **git clone https://github.com/sparkflows/writing-new-
 
 Writing new Node depends on the Fire jar file. The Fire jar file provides the parent class for any new Node. Use the below commands to install the fire jar in your local maven repo.
 
-    mvn install:install-file -Dfile=fire-spark_1_6-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_1_6-core  -Dversion=3.1.0 -Dpackaging=jar
+    mvn install:install-file -Dfile=fire-spark_2_1-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2_1-core  -Dversion=3.1.0 -Dpackaging=jar
     
 ### Build with Maven
 
