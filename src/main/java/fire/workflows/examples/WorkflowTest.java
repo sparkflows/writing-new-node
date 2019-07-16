@@ -15,8 +15,6 @@ import org.apache.spark.sql.SparkSession;
 
 public class WorkflowTest {
 
-    //--------------------------------------------------------------------------------------
-
     public static void main(String[] args) {
 
         // create spark session
@@ -27,7 +25,7 @@ public class WorkflowTest {
         JobContext jobContext = new JobContextImpl(ctx, workflowContext);
 
         try {
-            filterwf(jobContext);
+            wf(jobContext);
         } catch(Exception ex) {
             ex.printStackTrace();
         }
@@ -36,10 +34,8 @@ public class WorkflowTest {
         ctx.stop();
     }
 
-    //--------------------------------------------------------------------------------------
-
-    // filter columns workflow workflow
-    private static void filterwf(JobContext jobContext) throws Exception {
+    // create and execute the workflow
+    private static void wf(JobContext jobContext) throws Exception {
 
         Workflow wf = new Workflow();
 
