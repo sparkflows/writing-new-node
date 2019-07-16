@@ -6,6 +6,25 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 
 <!--- https://github.com/sparkflows/sparkflows-stanfordcorenlp -->
 
+<!--- 
+ This should be the structure: 
+  Step 1:  Check out from git - Just include checking out and installing jar/code
+      - move content from Developing with IntelliJ/Scala IDE for Eclipse here
+  Step 2: Copy " Directory Contents" and explain the contents
+  Step 3: Explain node hierarchy including a  hierarchy diagram 
+  Step 4: Creating new node 
+         - Creating new connectors node 
+            - Creating JSON  - show real JSON code in help 
+            - Creating node implementation - show real JSON code in help 
+            - Creating node rules - show real JSON code in help 
+         - Creating new processor node 
+             - Follow same structure as connector node
+         - Creating new Machine learning node 
+            - Follow same structure as connector node
+ Step 5: Running Test workflow to test node 
+ Step 6: Deploying your new node
+--> 
+
 # Next Steps
 
 - [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
