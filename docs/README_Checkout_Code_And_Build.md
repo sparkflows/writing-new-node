@@ -14,6 +14,15 @@ Writing new Node depends on the Fire jar file. The Fire jar file provides the pa
 
     mvn package
 
+### Jar files
+
+Building this repo generates the following jar files:
+
+	target/writing-new-node-3.1.0.jar
+	target/writing-new-node-3.1.0-jar-with-dependencies.jar
+
+The details for coding a New Node is here : https://github.com/sparkflows/writing-new-node/blob/master/CreatingNewNodes.md
+
 
 ### Running the workflow on a Spark Cluster
 
@@ -26,16 +35,6 @@ Below is the command to execute the example Workflow on a Spark cluster.
 Executors with 1G and 1 vcore each have been specified in the commands. The parameter **'cluster'** specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to **'local'** or not specifying it.
 
 	spark-submit --class fire.workflows.examples.WorkflowTest --master yarn-client target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
-
-
-### Jar files
-
-Building this repo generates the following jar files:
-
-	target/writing-new-node-3.1.0.jar
-	target/writing-new-node-3.1.0-jar-with-dependencies.jar
-
-The details for coding a New Node is here : https://github.com/sparkflows/writing-new-node/blob/master/CreatingNewNodes.md
 
 
 ### Display the example Node in fire-ui and run it from there
