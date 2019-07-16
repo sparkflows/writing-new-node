@@ -19,17 +19,12 @@ package fire.nodes.examples;
 
 import fire.context.JobContext;
 import fire.nodes.ml.NodePredictor;
-import fire.schemautil.DataFrameUtil;
 import fire.schemautil.SchemaUtil;
 import fire.util.parse.ParseDouble;
-import fire.workflowengine.WorkflowContext;
-import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.ml.classification.LogisticRegression;
 import org.apache.spark.ml.classification.LogisticRegressionModel;
 import org.apache.spark.ml.param.ParamMap;
 import org.apache.spark.ml.tuning.ParamGridBuilder;
-import org.apache.spark.sql.DataFrame;
-import org.apache.spark.sql.SQLContext;
 
 import java.io.Serializable;
 
@@ -164,10 +159,10 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
             String[] colNames = SchemaUtil.getColNamesForVectorAssembler(dataFrame, featuresCol);
             jobContext.workflowctx().outLogisticRegressionModel(this, colNames, model);
 
-            // pass model
+            // pass model to the next nodes
             passModelToNextNodes(jobContext, model);
 
-            // pass dataframe
+            // pass dataframe to the next nodes
             passDataFrameToNextNodes(jobContext, dataFrame);
         }
 

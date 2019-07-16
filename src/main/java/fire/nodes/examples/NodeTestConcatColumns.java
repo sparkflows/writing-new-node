@@ -5,7 +5,7 @@ import fire.nodes.etl.NodeETL;
 import fire.workflowengine.FireSchema;
 import fire.workflowengine.Workflow;
 import org.apache.spark.sql.Column;
-import org.apache.spark.sql.DataFrame;
+import org.apache.spark.sql.Dataset; import org.apache.spark.sql.Row;
 import scala.collection.mutable.ListBuffer;
 
 import static org.apache.spark.sql.functions.*;
@@ -39,7 +39,7 @@ public class NodeTestConcatColumns extends NodeETL implements Serializable {
             list.$plus$eq(col);
         }
 
-        DataFrame out=  dataFrame.select(col("*"),concat_ws(sep, list).as(outputCol));
+        Dataset<Row> out=  dataFrame.select(col("*"),concat_ws(sep, list).as(outputCol));
 
         passDataFrameToNextNodesAndExecute(jobContext, out);
 

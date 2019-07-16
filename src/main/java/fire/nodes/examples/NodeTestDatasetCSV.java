@@ -4,7 +4,9 @@ import fire.context.JobContext;
 import fire.nodes.dataset.NodeDataset;
 import fire.workflowengine.FireSchema;
 import fire.workflowengine.Workflow;
-import org.apache.spark.sql.DataFrame;
+import org.apache.spark.sql.Dataset; import org.apache.spark.sql.Row;
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Row;
 import org.apache.spark.sql.types.StructType;
 
 import java.io.Serializable;
@@ -79,7 +81,7 @@ public class NodeTestDatasetCSV extends NodeDataset implements Serializable {
         if (separator == null || separator.length() == 0)
             separator = ",";
 
-        DataFrame df = null;
+        Dataset<Row> df = null;
 
         df = executeCSV(jobContext);
 
@@ -93,7 +95,7 @@ public class NodeTestDatasetCSV extends NodeDataset implements Serializable {
 
     //------------------------------------------------------------------------------------------------------
 
-    private DataFrame executeCSV(JobContext jobContext) throws Exception {
+    private Dataset<Row> executeCSV(JobContext jobContext) throws Exception {
 
         String headerstr = "true";
         if (header == false)
@@ -106,24 +108,26 @@ public class NodeTestDatasetCSV extends NodeDataset implements Serializable {
 
         StructType customSchema = schema.toSparkSQLStructType();
 
-        DataFrame tdf = null;
+        Dataset<Row> tdf = null;
 
         if (dateFormat.length() > 0) {
-            tdf = jobContext.sqlctx().read().format("com.databricks.spark.csv")
+            tdf = jobContext.session().read()
+                    .format("csv")
                     .option("header", headerstr) // Use first line of all files as header
                     .option("inferSchema", "false") // Automatically do not infer data types
                     .option("delimiter", separator)
                     .option("dateFormat", dateFormat)
                     .schema(customSchema)
-                    .load(path);
+                    .csv(path);
 
         } else {
-            tdf = jobContext.sqlctx().read().format("com.databricks.spark.csv")
+            tdf = jobContext.session().read()
+                    .format("csv")
                     .option("header", headerstr) // Use first line of all files as header
                     .option("inferSchema", "false") // Automatically do not infer data types
                     .option("delimiter", separator)
                     .schema(customSchema)
-                    .load(path);
+                    .csv(path);
         }
 
         return tdf;
