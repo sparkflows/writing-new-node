@@ -2,7 +2,7 @@
 
 Below is the contents of the directory.
 
-* **fire-*-core-2.1.0.jar**
+* **fire-*-core-3.1.0.jar**
     * fire core jar which contains the fire Nodes and Workflow engine
 * **data**
     * sample data files
