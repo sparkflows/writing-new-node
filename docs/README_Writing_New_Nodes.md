@@ -17,7 +17,7 @@ http://spark.apache.org/docs/latest/sql-programming-guide.html
 
 ## Create the New Node
 
-* Create the New Node as a Java class by extending the **Node** class
+* Create the New Node as a Java or Scala class by extending the **Node** class
 
 ## Overide the execute() method in the New Node:
 
