@@ -10,6 +10,7 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
  This should be the structure: 
   Step 1:  Check out from git - Just include checking out and installing jar/code
       - move content from Developing with IntelliJ/Scala IDE for Eclipse here
+      - Move building and deploying to step 6
   Step 2: Copy " Directory Contents" and explain the contents
   Step 3: Explain node hierarchy including a hierarchy diagram 
   Step 4: Creating new node 
