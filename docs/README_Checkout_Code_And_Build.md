@@ -49,21 +49,20 @@ Use the command below to load example data onto HDFS. It is then used by the exa
 
 	hadoop fs -put data
 
-Below is the command to execute the example Workflow on a Spark cluster. 
+Below is the command to execute the example Workflow on an Apache Spark cluster. 
 
-Executors with 1G and 1 vcore each have been specified in the commands. The parameter **'cluster'** specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to **'local'** or not specifying it.
+The parameter 'cluster' specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to 'local' or not specifying it.
 
-	spark-submit --class fire.workflows.examples.WorkflowTest --master yarn-client target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
+	spark-submit --master yarn --deploy-mode client --class fire.workflows.examples.WorkflowTest target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
 
 
-### Display the example Node in fire-ui and run it from there
+### Display the example Node in Fire Insights and run it from there
 
-New nodes written can be made visible in the Sparkflows UI. Thus, the users can start using them immediately.
+New nodes written can be made visible in the Fire Insights UI. Thus, the users can start using them immediately.
 
 * Copy the **writing-new-node-3.1.0.jar** to **fire-server-lib** and **fire-user-lib** directory of the sparkflows install
 * Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
-* Restart fire
-* Restart fire-ui
+* Restart Fire Insights : ./run-fire-server.sh restart
 * **TestPrintNRows** node would now be visible in the workflow editor window and you can start using it.
 
 
