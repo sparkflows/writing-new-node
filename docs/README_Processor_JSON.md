@@ -52,6 +52,40 @@ In the example, we see the following **widgets** used:
 | variables_list_array  | Display a dropdown of values  |  |
 | variables_list_textfield  | Allows the user to enter an editable value  | {"name": "values", "value":"[]", "widget": "variables_list_edit", "title": "Values", "description": "Values"} |
 
+## Examples
+
+### ReadCSV
+
+```
+{
+  "id": "11",
+  "name": "ReadCSV",
+
+  "description": "It reads in CSV files and creates a DataFrame from it",
+  "input": "It reads in CSV text files",
+  "output": "It creates a DataFrame from the data read and sends it to its output",
+
+  "type": "dataset",
+  "engine": "all",
+  "nodeClass": "fire.nodes.dataset.NodeDatasetCSV",
+  "fields" : [
+    {"name":"path", "display":true,"value":"", "widget": "textfield", "required":true, "title": "Path", "description": "Path of the Text file/directory"},
+    {"name":"separator", "value":",", "widget": "textfield", "title": "Separator", "description": "CSV Separator"},
+    {"name": "header", "value":"false", "widget": "array", "title": "Header", "optionsArray": ["true","false"],
+            "description": "Does the file have a header row"},
+    {"name": "dropMalformed", "value":"false", "widget": "array", "title": "Drop Malformed", "optionsArray": ["true","false"],
+      "description": "Whether to drop Malformed records or error"},
+
+    {"name":"outputColNames", "value":"[]", "widget": "schema_col_names", "title": "Column Names for the CSV", "description": "New Output Columns of the SQL"},
+    {"name":"outputColTypes", "value":"[]", "widget": "schema_col_types", "title": "Column Types for the CSV", "description": "Data Type of the Output Columns"},
+    {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Column Formats for the CSV", "description": "Format of the Output Columns"}
+
+  ]
+}
+
+```
+
+
 
 ## Ability to Browse the HDFS
 
