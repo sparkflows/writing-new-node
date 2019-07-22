@@ -85,6 +85,23 @@ In the example, we see the following **widgets** used:
 
 ```
 
+### Column Filter
+
+```
+{
+  "id": "11",
+  "name": "ColumnFilter",
+  "description": "This node creates a new DataFrame that contains only the selected columns",
+  "input": "This type of node takes in a DataFrame and transforms it to another DataFrame.",
+  "output": "This node filters the specified columns from the incoming DataFrame",
+  "type": "transform",
+  "engine": "all",
+  "nodeClass": "fire.nodes.etl.NodeColumnFilter",
+  "fields" : [
+    {"name":"outputCols", "value": "[]", "widget": "variables", "title": "Columns", "description": "Columns to be included in the output DataFrame"}
+  ]
+}
+```
 
 
 ## Ability to Browse the HDFS
