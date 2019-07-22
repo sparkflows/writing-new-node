@@ -103,6 +103,26 @@ In the example, we see the following **widgets** used:
 }
 ```
 
+### Math Expression
+
+```
+{
+  "id": "7",
+  "name": "Math Expression",
+  "description": "",
+  "type": "transform",
+  "nodeClass": "fire.nodes.etl.NodeMathExpression",
+  "fields" : [
+  
+   {"name": "outputCols", "value":"[]", "widget": "key_array",
+      "title": "OutPut Column", "description": "Output Column Name"},
+
+    {"name": "expressions", "value":"[]", "widget": "value_array",
+      "title": "Math Expression", "description": "Define math expression."}
+
+  ]
+}
+```
 
 ## Ability to Browse the HDFS
 
