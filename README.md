@@ -28,7 +28,7 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
  Step 6: Deploying your new node
 --> 
 
-# Next Steps
+# Getting Started
 
 - [Checkout Code, Build and Run](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code_And_Build.md)
 - [Developing with IntelliJ/Scala IDE for Eclipse](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Developing_With_IntelliJ_Eclipse.md)
