@@ -2,7 +2,7 @@
 
 ### Check out the code
 
-Check out the code with : **git clone https://github.com/sparkflows/writing-new-node.git**
+    git clone https://github.com/sparkflows/writing-new-node.git
 
 ### Install the Fire jar to the local maven repository
 
