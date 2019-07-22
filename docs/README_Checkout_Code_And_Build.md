@@ -6,7 +6,9 @@
 
 ### Install the Fire jar to the local maven repository
 
-Writing new node depends on the Fire jar file. The Fire jar file provides the parent class for any new node. Use one of the commands below to install  fire jar in your local maven repo for Apache Spark 2.3 or Apache Spark 2.1.
+Writing new node depends on the Fire jar file. The Fire jar file provides the parent class for any new node. 
+
+Use one of the commands below to install  fire jar in your local maven repo for Apache Spark 2.3 or Apache Spark 2.1.
 
     mvn install:install-file -Dfile=fire-spark_2.3-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.3-core  -Dversion=3.1.0 -Dpackaging=jar
     
