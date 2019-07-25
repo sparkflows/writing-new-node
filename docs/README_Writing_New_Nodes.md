@@ -33,3 +33,10 @@ If the new Node changes the incoming schema, override the getSchema() method to 
     @Override
     public FireSchema getOutputSchema(Workflow workflow, FireSchema inputSchema) 
 
+## Examples
+
+Below are some example of new Nodes in this repo:
+
+* https://github.com/sparkflows/writing-new-node/tree/master/src/main/java/fire/nodes/examples
+* https://github.com/sparkflows/writing-new-node/tree/master/src/main/scala/fire/nodes/examples
+
