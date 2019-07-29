@@ -34,6 +34,7 @@
 
 ## NodeSamplePrintNRows
 
+```
 class NodeSamplePrintNRows(Node):
     def __init__(self, id: int, name: str, description: str, parameters_mapping: dict):
         self.num_rows = parameters_mapping['n']
@@ -51,5 +52,7 @@ class NodeSamplePrintNRows(Node):
             job_context.workflowContext.outDataFrame(self.id, self.title, self.dataFrame)
 
         self.execute_next_nodes(job_context, self.dataFrame)
+
+```
 
 
