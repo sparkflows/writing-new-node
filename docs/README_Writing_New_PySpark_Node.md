@@ -19,12 +19,12 @@
   - The execute method would pass the new DataFrame created by the method to the next nodes
     self.execute_next_nodes(job_context, self.dataFrame)
 
-- Place the python file for the new node under fire/customnodes or a new directory under fire
-- Update fire/create_custom_node.py to create the new Node of that class. Example below:
-
+- Place the python file for the new node under **fire/customnodes** or a new directory under fire
+- Update **fire/create_custom_node.py** to create the new Node of that class. Example below:
+```
     if node_class == "fire.nodes.util.NodeSamplePrintFirstNRows":
         node = NodeSamplePrintNRows(nodeid, name, description, parameters_mapping)
-
+```
 - Recreate new jobs.zip which includes the new Node
 
     - zip -r jobs.zip *
