@@ -12,9 +12,11 @@
 - Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
 
 - Write the __init__ method in it.
-  - def **__init__(self, id: int, name: str, description: str, parameters_mapping: dict):**
-    - parameters_mapping provides the incoming parameters for the new node
+```
+    def __init__(self, id: int, name: str, description: str, parameters_mapping: dict):
 
+    parameters_mapping provides the incoming parameters for the new node
+```
 - Write the execute method in the new class
   - **def execute(self, job_context: JobContext):**
     - It gets the JobContext as its argument
