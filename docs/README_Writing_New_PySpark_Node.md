@@ -14,15 +14,17 @@
 - Write the __init__ method in it.
 ```
     def __init__(self, id: int, name: str, description: str, parameters_mapping: dict):
-
-    parameters_mapping provides the incoming parameters for the new node
+    (parameters_mapping provides the incoming parameters for the new node)
 ```
 - Write the execute method in the new class
-  - **def execute(self, job_context: JobContext):**
-    - It gets the JobContext as its argument
-    - The variable dataFrame which is of type DataFrame has been populated by the incoming DataFrame into the node.
-  - The execute method would pass the new DataFrame created by the method to the next nodes
+```
+    def execute(self, job_context: JobContext):
+    
+    (It gets the JobContext as its argument)
+    (The variable dataFrame which is of type DataFrame has been populated by the incoming DataFrame into the node)
+    (The execute method would pass the new DataFrame created by the method to the next nodes)
     self.execute_next_nodes(job_context, self.dataFrame)
+```
 
 - Place the python file for the new node under **fire/customnodes** or a new directory under fire
 - Update **fire/create_custom_node.py** to create the new Node of that class. Example below:
