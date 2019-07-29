@@ -38,12 +38,11 @@
     zip -r jobs.zip *
     chmod +x jobs.zip
 ```
-- Stop the running pyspark servers
+- Restart the fire server
 ```
-    ./run-fire-pyspark.sh stop
+    ./run-fire-server.sh restart
 ```
-    These pyspark servers would be automatically restarted by the main web server.
-
+    
 ## NodeSamplePrintNRows
 
 ```
