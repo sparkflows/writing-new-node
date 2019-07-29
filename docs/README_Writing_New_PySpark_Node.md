@@ -3,17 +3,17 @@
 - Install Sparkflows
 - **cd .../fire-3.1.0/dist**
 - unzip jobs.zip to get the code
-    **unzip jobs.zip**
+  - **unzip jobs.zip**
 
 - Create a new Class in python.
 - Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
 
 - Write the __init__ method in it.
-  - def __init__(self, id: int, name: str, description: str, parameters_mapping: dict):
+  - def **__init__(self, id: int, name: str, description: str, parameters_mapping: dict):**
     - parameters_mapping provides the incoming parameters for the new node
 
 - Write the execute method in the new class
-  - def execute(self, job_context: JobContext):
+  - **def execute(self, job_context: JobContext):**
     - It gets the JobContext as its argument
     - The variable dataFrame which is of type DataFrame has been populated by the incoming DataFrame into the node.
   - The execute method would pass the new DataFrame created by the method to the next nodes
