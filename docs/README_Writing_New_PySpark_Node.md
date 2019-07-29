@@ -1,9 +1,12 @@
 # Writing new PySpark Node
 
 - Install Sparkflows
-- **cd .../fire-3.1.0/dist**
+
 - unzip jobs.zip to get the code
-  - **unzip jobs.zip**
+```
+    cd .../fire-3.1.0/dist
+    unzip jobs.zip
+```    
 
 - Create a new Class in python.
 - Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
