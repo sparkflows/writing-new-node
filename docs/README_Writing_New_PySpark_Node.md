@@ -26,12 +26,14 @@
         node = NodeSamplePrintNRows(nodeid, name, description, parameters_mapping)
 ```
 - Recreate new jobs.zip which includes the new Node
-
-    - zip -r jobs.zip *
-    - chmod +x jobs.zip
-
+```
+    zip -r jobs.zip *
+    chmod +x jobs.zip
+```
 - Restart fire server
-  - **run-fire-server.sh restart**
+```
+    run-fire-server.sh restart
+```
 
 ## NodeSamplePrintNRows
 
