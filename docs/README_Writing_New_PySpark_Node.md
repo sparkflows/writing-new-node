@@ -19,11 +19,12 @@
 - Write the execute method in the new class
 ```
     def execute(self, job_context: JobContext):
-    
+        self.execute_next_nodes(job_context, self.dataFrame)
+        
     (It gets the JobContext as its argument)
     (The variable dataFrame which is of type DataFrame has been populated by the incoming DataFrame into the node)
     (The execute method would pass the new DataFrame created by the method to the next nodes)
-    self.execute_next_nodes(job_context, self.dataFrame)
+    
 ```
 
 - Place the python file for the new node under **fire/customnodes** or a new directory under fire
