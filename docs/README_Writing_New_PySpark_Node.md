@@ -30,7 +30,8 @@
     - zip -r jobs.zip *
     - chmod +x jobs.zip
 
-- Restart run-fire-server.sh
+- Restart fire server
+  - *run-fire-server.sh restart**
 
 ## NodeSamplePrintNRows
 
