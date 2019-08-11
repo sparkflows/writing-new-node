@@ -35,7 +35,7 @@ If the new Node changes the incoming schema, override the getSchema() method to 
 
 ## Examples
 
-Below are some example of new Nodes in this repo:
+The following folders contain some examples of new Nodes in this repo written in Java and in Scala:
 
 * https://github.com/sparkflows/writing-new-node/tree/master/src/main/java/fire/nodes/examples
 * https://github.com/sparkflows/writing-new-node/tree/master/src/main/scala/fire/nodes/examples
