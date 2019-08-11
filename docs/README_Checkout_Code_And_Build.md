@@ -1,12 +1,16 @@
 ## Checkout Code, Build and Start using the New Custom Processor
 
+With the steps below, you can check our the code for a sample custom processor, build it, deploy it in Fire Insights and start using it.
+
 ### Check out the code
 
-Check out the code with : **git clone https://github.com/sparkflows/writing-new-node.git**
+    git clone https://github.com/sparkflows/writing-new-node.git
 
 ### Install the Fire jar to the local maven repository
 
-Writing new node depends on the Fire jar file. The Fire jar file provides the parent class for any new node. Use one of the commands below to install  fire jar in your local maven repo for Apache Spark 2.3 or Apache Spark 2.1.
+Writing new node depends on the Fire jar file. The Fire jar file provides the parent class for any new node. 
+
+Use one of the commands below to install  fire jar in your local maven repo for Apache Spark 2.3 or Apache Spark 2.1.
 
     mvn install:install-file -Dfile=fire-spark_2.3-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.3-core  -Dversion=3.1.0 -Dpackaging=jar
     
@@ -62,7 +66,7 @@ The parameter 'cluster' specifies that we are running the workflow on a cluster 
 
 New nodes written can be made visible in the Fire Insights UI. Thus, the users can start using them immediately.
 
-* Copy the **writing-new-node-3.1.0.jar** to **fire-server-lib** and **fire-user-lib** directory of the sparkflows install
+* Copy the **writing-new-node-3.1.0.jar** to **fire-user-lib** directory of the sparkflows install
 * Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
 * Restart Fire Insights : ./run-fire-server.sh restart
 * **TestPrintNRows** node would now be visible in the workflow editor window and you can start using it.

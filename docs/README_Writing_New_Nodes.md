@@ -1,4 +1,4 @@
-# Writing New Nodes
+# Writing New Nodes in Java/Scala
 
 New Nodes can be easily added for adding new functionality.
 
@@ -32,4 +32,11 @@ If the new Node changes the incoming schema, override the getSchema() method to 
 
     @Override
     public FireSchema getOutputSchema(Workflow workflow, FireSchema inputSchema) 
+
+## Examples
+
+The following folders contain some examples of new Nodes in this repo written in Java and in Scala:
+
+* https://github.com/sparkflows/writing-new-node/tree/master/src/main/java/fire/nodes/examples
+* https://github.com/sparkflows/writing-new-node/tree/master/src/main/scala/fire/nodes/examples
 
