@@ -2,7 +2,7 @@
 
 The workflow can be created from the Sparkflows user interface. Each workflow has a json representation.
 
-The workflow json can be submitted to execution on the cluster with spark-submit.
+The workflow json can be submitted for execution on the cluster with spark-submit.
 
 In the below example, the workflow json is ExampleWorkflow.json.
 
