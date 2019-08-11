@@ -33,6 +33,9 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 - [Checkout Code, Build and Run](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code_And_Build.md)
 - [Developing with IntelliJ or Scala IDE for Eclipse](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Developing_With_IntelliJ_Eclipse.md)
 - [Running Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
+
+# Writing new Java/Scala Nodes
+
 - [Writing New Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_Nodes.md)
 
 # Reference Docs
@@ -43,7 +46,7 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 - [Writing Machine Learning Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_Machine_Learning_Nodes.md)
 - [Passing Value to Other Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Passing_Value_To_Other_Nodes.md)
 
-# Writing new PySpark Node
+# Writing new PySpark Nodes
 
 - [Writing new PySparkNode](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_PySpark_Node.md)
 
