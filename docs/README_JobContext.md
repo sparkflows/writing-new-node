@@ -2,11 +2,11 @@
 
 The execute method of a Node gets passed the JobContext object.
 
-### JobContext
+## JobContext
 
 JobContext object gives access to the following useful variables in the class JobContext:
 
-* HashMap<String, String> allVariables;
+### HashMap<String, String> allVariables;
 
 It contains a map of the variables name and value. Variables could have come in in various ways:
 
@@ -15,10 +15,10 @@ It contains a map of the variables name and value. Variables could have come in 
 * Through the NodeVariables in the workflow
 
 
-* Workflow workflow
+### Workflow workflow
 
 It gives access to the Workflow which is being executed.
 
-* String userName
+### String userName
 
-It is the name of the user who is executing the workflow
+It contains the name of the user who is executing the workflow
