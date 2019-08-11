@@ -4,7 +4,7 @@ The execute method of a Node gets passed the JobContext object.
 
 ## JobContext
 
-JobContext class gives access to the following useful public variables.
+JobContext class gives access to the following useful public variables and methods.
 
 ### Variables
 
