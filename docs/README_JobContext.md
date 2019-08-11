@@ -6,7 +6,7 @@ The execute method of a Node gets passed the JobContext object.
 
 JobContext object gives access to the following useful variables in the class JobContext:
 
-### HashMap<String, String> allVariables;
+### HashMap<String, String> allVariables
 
 It contains a map of the variables name and value. Variables could have come in in various ways:
 
