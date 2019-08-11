@@ -36,15 +36,15 @@ It contains the name of the user who is executing the workflow
 
 JobContext has the following useful public methods.
 
-### SparkSession session()
+#### SparkSession session()
 
 Returns the SparkSession
 
-### JavaSparkContext sc()
+#### JavaSparkContext sc()
 
 Returns the JavaSparkContext
 
-### SQLContext sqlctx()
+#### SQLContext sqlctx()
 
 Returns the SQLContext
 
