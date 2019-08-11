@@ -29,3 +29,13 @@ It gives access to the Workflow which is being executed.
 ### String userName
 
 It contains the name of the user who is executing the workflow
+
+### JavaSparkContext sc()
+
+The JavaSparkContext
+
+### SQLContext sqlctx()
+
+SQLContext
+
+    
