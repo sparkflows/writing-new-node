@@ -30,12 +30,16 @@ It gives access to the Workflow which is being executed.
 
 It contains the name of the user who is executing the workflow
 
+### SparkSession session()
+
+The SparkSession
+
 ### JavaSparkContext sc()
 
 The JavaSparkContext
 
 ### SQLContext sqlctx()
 
-SQLContext
+The SQLContext
 
     
