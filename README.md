@@ -40,9 +40,6 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 - [Node Class Hierarchy](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Class_Hierarchy.md)
 - [Writing Machine Learning Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_Machine_Learning_Nodes.md)
 
-## Using and Executing New Processors in Fire Insights
-
-- [Checkout Code, Build and Deploy New Custom Processor into Fire Insights](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code_And_Build.md)
 
 ## Reference Docs
 
