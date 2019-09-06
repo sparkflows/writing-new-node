@@ -40,7 +40,7 @@ public class WorkflowTest {
         Workflow wf = new Workflow();
 
         // NODE IDS HAVE TO BE UNIQUE
-        
+
         // structured node
         NodeDatasetStructured structured = new NodeDatasetStructured(1, "csv1 node", "data/cars.csv", DatasetType.CSV, ",",
                 "id label f1 f2", "double double double double",
@@ -62,6 +62,7 @@ public class WorkflowTest {
         // execute the workflow
         wf.execute(jobContext);
 
+        System.out.println(wf.tojson());
     }
     
 }

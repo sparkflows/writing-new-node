@@ -15,6 +15,7 @@
     <hadoop.version>2.6.5</hadoop.version>
     <scala.version>2.11.8</scala.version>
     <scala.binary.version>2.11</scala.binary.version>
+    <h2o>3.24.0.4</h2o>
   </properties>
 
   <dependencies>
@@ -62,6 +63,13 @@
           <artifactId>pmml-model</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>ai.h2o</groupId>
+      <artifactId>h2o-core</artifactId>
+      <version>${h2o}</version>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>
