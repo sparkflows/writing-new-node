@@ -31,7 +31,7 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 - [Checkout Code](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code.md)
 - [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
 - [Build and Execute Examples](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Build_Execute_Examples.md)
-- [Running Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
+- [Executing Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
 
 
 ## Writing new Java/Scala Nodes
