@@ -44,7 +44,7 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 - [Node Class Hierarchy](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Class_Hierarchy.md)
 - [JobContext and Workflow](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_JobContext.md)
 - [Writing Machine Learning Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_Machine_Learning_Nodes.md)
-- [Node Variables](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Variables.md)
+- [Workflow Parameters & Node Variables](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Variables.md)
 
 ## Writing new PySpark Nodes
 
