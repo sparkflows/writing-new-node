@@ -1,3 +1,12 @@
+## Workflow Parameters
+
+Workflow level Parameters are described here:
+
+http://docs.sparkflows.io/en/latest/user-guide/workflows/passing-parameters-to-workflows.html
+
+Workflow level Parameters allow passing parameters to the workflow during execution. The fields in the processors, get replaced with the workflow level parameters before the workflow is executed.
+
+
 ## Node Variables
 
 There are cases when a value from one Node needs to be passed to the Next Nodes.
