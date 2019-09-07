@@ -1,4 +1,4 @@
-## Checkout Code, 
+## Checkout Code, Install Fire jar
 
 With the steps below, you can check our the code for a sample custom processor, build it, deploy it in Fire Insights and start using it.
 
