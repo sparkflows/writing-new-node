@@ -20,14 +20,14 @@ Use one of the commands below to install  fire jar in your local maven repo for 
 
 You can use IntelliJ or Scala IDE for Eclipse for your development. Feel free to use any other tool of your choice.
 
-## Developing with IntelliJ
+### Developing with IntelliJ
 
 IntelliJ can be downloaded from https://www.jetbrains.com/idea/
 
     Add the scala plugin into IntelliJ.
     Import writing-new-node as a Maven project into IntelliJ.
 
-## Developing with Scala IDE for Eclipse
+### Developing with Scala IDE for Eclipse
 
 Scala IDE for Eclipse can be downloaded from http://scala-ide.org/
 
