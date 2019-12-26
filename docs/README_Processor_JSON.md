@@ -51,6 +51,8 @@ In the example, we see the following **widgets** used:
 | variables_list_select  | Allows adding rows of values. Displays a dropdown of columns from which the user can select  | {"name": "inputCols", "value":"[]", "widget": "variables_list_select", "title": "Columns", "description": "Columns"} |
 | variables_list_array  | Display a dropdown of values  |  |
 | variables_list_textfield  | Allows the user to enter an editable value  | {"name": "values", "value":"[]", "widget": "variables_list_edit", "title": "Values", "description": "Values"} |
+| list_textfield  | Allows the user to enter an editable value for a list of fields  | {"name": "values", "value":"[]", "widget": "list_textfield", "title": "Values", "description": "Values"} |
+| list_select  | Allows adding rows of values. Displays a dropdown of columns from which the user can select  | {"name": "values", "value":"[]", "widget": "list_select", "title": "Values", "description": "Values"} |
 
 ## Examples
 
