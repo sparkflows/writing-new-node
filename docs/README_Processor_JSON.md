@@ -50,9 +50,9 @@ In the example, we see the following **widgets** used:
 | variables_map_array  | Allows the user to select a value from a list of available values, which are displayed in a dropdown  | {"name": "matchingAlgorithms", "value":"[]", "widget": "variables_map_array", "optionsArray": ["fullmatch", "levenshtein", "jarowinkler", "jaccard(3 gram)", "longestCommonSubsequence","notionalDistance","dateDifference"], "title": "Algorithm to use", "description": "Algorithm to use for matching" |
 | variables_list_select  | Allows adding rows of values. Displays a dropdown of columns from which the user can select  | {"name": "inputCols", "value":"[]", "widget": "variables_list_select", "title": "Columns", "description": "Columns"} |
 | variables_list_array  | Display a dropdown of values  |  |
-| variables_list_textfield  | Allows the user to enter an editable value  | {"name": "values", "value":"[]", "widget": "variables_list_edit", "title": "Values", "description": "Values"} |
-| list_textfield  | Allows the user to enter an editable value for a list of fields  | {"name": "values", "value":"[]", "widget": "list_textfield", "title": "Values", "description": "Values"} |
-| list_select  | Allows adding rows of values. Displays a dropdown of columns from which the user can select  | {"name": "values", "value":"[]", "widget": "list_select", "title": "Values", "description": "Values"} |
+| variables_list_textfield  | Allows the user to enter an editable value  | {"name": "values", "value":"[]", "widget": "variables_list_textfield", "title": "Values", "description": "Values"} |
+| list_textfield  | Allows adding rows of values. Allows the user to enter an editable value for a list of fields  | {"name": "values", "value":"[]", "widget": "list_textfield", "title": "Values", "description": "Values"} |
+| list_array  | Displays a dropdown of columns from which the user can select  | {"name": "values", "value":"[]", "widget": "list_array", "title": "Values", "description": "Values"} |
 
 ## Examples
 
