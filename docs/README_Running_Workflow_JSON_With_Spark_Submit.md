@@ -4,7 +4,7 @@ Workflows can also be executed on the cluster directory with the ``spark-submit`
 
 In the spark-submit example below, the workflow json is ``ExampleWorkflow.json``.
 
-	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client --executor-memory 1G  target/writing-new-node-3.1.0-jar-with-dependencies.jar --workflow-file ExampleWorkflow.json
+	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client target/writing-new-node-3.1.0-jar-with-dependencies.jar --workflow-file ExampleWorkflow.json
 
 ExampleWorkflow.json consists of 3 processors:
 
