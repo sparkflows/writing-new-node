@@ -1,6 +1,6 @@
 # Processor/Node JSON & Widgets
 
-The Fire UI allows specifying how the dialog box of any Processor would look like. Each Processor has a corresponding json file.
+The Fire Insights UI allows specifying how the dialog box of any Processor would look like. Each Processor has a corresponding json file.
 
 Below is the example of **'NodeConcatColumns'**. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
 In the example, we see the following **widgets** used:
