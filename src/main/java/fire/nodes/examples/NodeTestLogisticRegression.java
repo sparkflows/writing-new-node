@@ -157,7 +157,7 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
             jobContext.workflowctx().outLogisticRegressionModel(this, colNames, model);
 
             // pass model to the next nodes
-            passModelToNextNodes(jobContext, model);
+            //passModelToNextNodes(jobContext, model);
 
             // pass dataframe to the next nodes
             passDataFrameToNextNodes(jobContext, dataFrame);

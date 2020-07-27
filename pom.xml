@@ -10,19 +10,18 @@
 
   <properties>
     <java.version>1.8</java.version>
-    <avro.version>1.7.7</avro.version>
-    <spark.version>2.3.0</spark.version>
-    <hadoop.version>2.6.5</hadoop.version>
-    <scala.version>2.11.8</scala.version>
+    <avro.version>1.8.2</avro.version>
+    <spark.version>2.4.0</spark.version>
+    <hadoop.version>2.8.5</hadoop.version>
+    <scala.version>2.11.12</scala.version>
     <scala.binary.version>2.11</scala.binary.version>
-    <h2o>3.24.0.4</h2o>
   </properties>
 
   <dependencies>
 
     <dependency>
       <groupId>fire</groupId>
-      <artifactId>fire-spark_2.3-core</artifactId>
+      <artifactId>fire-spark_2.4-core</artifactId>
       <version>3.1.0</version>
     </dependency>
 
@@ -48,12 +47,6 @@
 
     <dependency> <!-- Spark dependency -->
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-hive_2.11</artifactId>
-      <version>${spark.version}</version>
-    </dependency>
-
-    <dependency> <!-- Spark dependency -->
-      <groupId>org.apache.spark</groupId>
       <artifactId>spark-mllib_2.11</artifactId>
       <version>${spark.version}</version>
       <!-- <scope>provided</scope> -->
@@ -63,13 +56,6 @@
           <artifactId>pmml-model</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>
-
-    <dependency>
-      <groupId>ai.h2o</groupId>
-      <artifactId>h2o-core</artifactId>
-      <version>${h2o}</version>
-      <scope>compile</scope>
     </dependency>
 
   </dependencies>
