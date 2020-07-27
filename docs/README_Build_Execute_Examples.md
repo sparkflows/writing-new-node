@@ -51,7 +51,7 @@ New nodes written can be made visible in the Fire Insights UI. Thus, the users c
 
 * Copy the **writing-new-node-3.1.0.jar** to **fire-user-lib** directory of the sparkflows install
 * Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
-* Restart Fire Insights : ./run-fire-server.sh restart
+* Restart Fire Insights : **./run-fire-server.sh restart**
 * **TestPrintNRows** node would now be visible in the workflow editor window and you can start using it.
 
 
