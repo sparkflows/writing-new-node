@@ -10,11 +10,9 @@ With the steps below, you can check out the code for a sample custom processor, 
 
 Writing new node depends on the Fire jar file. The Fire jar file provides the parent class for any new node. 
 
-Use one of the commands below to install  fire jar in your local maven repo for Apache Spark 2.3 or Apache Spark 2.1.
+Use the command below to install  fire jar in your local maven repo. Use the appropriate Spark version.
 
-    mvn install:install-file -Dfile=fire-spark_2.3-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.3-core  -Dversion=3.1.0 -Dpackaging=jar
-    
-    mvn install:install-file -Dfile=fire-spark_2_1-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2_1-core  -Dversion=3.1.0 -Dpackaging=jar
+    mvn install:install-file -Dfile=fire-spark_2.4-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.4-core  -Dversion=3.1.0 -Dpackaging=jar
     
 ## Development
 
