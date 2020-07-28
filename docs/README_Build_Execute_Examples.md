@@ -1,7 +1,7 @@
     
 ### Build with Maven
 
-    mvn package
+    mvn clean package
 
 ### Jar files
 
