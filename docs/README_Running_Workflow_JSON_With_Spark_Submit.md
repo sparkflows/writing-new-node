@@ -6,7 +6,7 @@ In the spark-submit example below, the workflow json is ``ExampleWorkflow.json``
 
 	spark-submit --class fire.execute.WorkflowExecuteFromFile --master yarn-client target/writing-new-node-3.1.0-jar-with-dependencies.jar --workflow-file ExampleWorkflow.json
 
-ExampleWorkflow.json consists of 3 processors:
+exampleworkflow.json consists of 3 processors:
 
 * **fire.nodes.dataset.NodeDatasetTextFiles** : Reads in the file data/cars.csv as a text file
 * **fire.nodes.etl.NodeFieldSplitter** : Splits each line into columns c1,c2,c3,c4 using the comma as separator
