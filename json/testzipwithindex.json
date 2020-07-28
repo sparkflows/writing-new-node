@@ -1,0 +1,15 @@
+{
+  "id": "11",
+  "name": "TestZipWithIndex",
+  "description": "This node Generates a new column with unique Index/Value for each row in the Dataset",
+  "input": "",
+  "engine": "all",
+  "type": "transform",
+  "nodeClass": "fire.nodes.examples.NodeTestZipWithIndex",
+  "fields" : [
+
+    {"name":"indexColName", "value": "", "widget": "textfield", "title": "Index Column Name", "description": "Index column name"}
+
+
+  ]
+}
