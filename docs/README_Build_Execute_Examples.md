@@ -36,7 +36,7 @@ It would finally print the following values.
 
 ### Running the workflow on a Spark Cluster
 
-Use the command below to load example data onto HDFS. It is then used by the example Workflow.
+Use the command below to load example data onto HDFS. It is used by the example Workflows.
 
 	hadoop fs -put data
 
