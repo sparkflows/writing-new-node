@@ -61,8 +61,7 @@ public class WorkflowTest {
 
         // execute the workflow
         wf.execute(jobContext);
-
-        System.out.println(wf.tojson());
+        
     }
     
 }
