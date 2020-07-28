@@ -97,6 +97,39 @@ In the example below, we see the following **widgets** used:
 
 ```
 
+### ReadDatabricksTable
+
+```
+{
+  "id": "11",
+  "name": "ReadDatabricksTable",
+
+  "description": "This node reads a table from Databricks",
+  "input": "It reads data from Databricks Table",
+  "output": "It creates a DataFrame from the data read and sends it to its output",
+  "hint": "Whenever the table is changed, go to Schema tab and Refresh the Schema",
+  "type": "dataset",
+  "nodeClass": "fire.nodes.databricks.NodeReadDatabricksTable",
+  "fields" : [
+
+    {"name":"db", "value":"default", "widget": "textfield", "title": "Databricks Database",
+      "description": "Databricks Database"},
+
+    {"name":"table", "display":true, "value":"", "widget": "textfield", "title": "Databricks Table",
+      "description": "Databricks Table from which to read the data"},
+
+    {"name":"query", "value":"", "widget": "textarea_medium", "title": "Databricks Query (Optional)",
+      "description": "If a separate Databricks query needs to be used for reading from the Databricks table. This field is optional."},
+
+    {"name": "schema", "value":"", "widget": "tab", "title": "Schema"},
+
+    {"name":"outputColNames", "value":"[]", "widget": "schema_col_names", "title": "Column Names of the Table", "description": "Output Columns Names of the Table"},
+    {"name":"outputColTypes", "value":"[]", "widget": "schema_col_types", "title": "Column Types of the Table", "description": "Output Column Types of the Table"},
+    {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Column Formats", "description": "Output Column Formats"}
+  ]
+}
+```
+
 ### Column Filter
 
 ```
@@ -111,6 +144,48 @@ In the example below, we see the following **widgets** used:
   "nodeClass": "fire.nodes.etl.NodeColumnFilter",
   "fields" : [
     {"name":"outputCols", "value": "[]", "widget": "variables", "title": "Columns", "description": "Columns to be included in the output DataFrame"}
+  ]
+}
+```
+
+### DropDuplicateRows
+```
+{
+  "id": "11",
+  "name": "DropDuplicateRows",
+  "description": "1>When user don't select any column, returns a new Dataset that contains only the unique rows from this Dataset. 2> Returns a new Dataset with duplicate rows removed, considering only the subset of columns.",
+  "type": "transform",
+  "nodeClass": "fire.nodes.etl.NodeDropDuplicateRows",
+  "fields" : [
+    {"name":"colNames", "value": "[]", "widget": "variables", "title": "Columns", "description": "Columns to be used in determining if any two rows are duplication. No columns indicate to use all the available columns."}
+  ]
+}
+
+```
+
+### JoinUsingSQL
+
+```
+{
+  "id": "1",
+  "name": "JoinUsingSQL",
+
+  "description": "This node registers the incoming DataFrames as temporary tables and executes the SQL provided",
+  "input": "It takes in 2 DataFrames as input and produces one DataFrame as output by executing the provided SQL.",
+  "output": "The DataFrame created as a result of executing the join SQL",
+
+  "type": "join",
+  "nodeClass": "fire.nodes.etl.NodeJoinUsingSQL",
+  "fields" : [
+    {"name":"tempTables", "value":"[]", "widget": "array_of_values", "title": "Temp Table Names", "description": "Temp Table Name to be used"},
+
+    {"name":"sql", "value":"", "widget": "textarea_large", "type": "sql", "title": "SQL", "description": "SQL to be run"},
+
+    {"name": "schema", "value":"", "widget": "tab", "title": "Schema"},
+    
+    {"name":"outputColNames", "value":"[]", "widget": "schema_col_names", "title": "Column Names for the CSV", "description": "New Output Columns of the SQL"},
+    {"name":"outputColTypes", "value":"[]", "widget": "schema_col_types", "title": "Column Types for the CSV", "description": "Data Type of the Output Columns"},
+    {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Column Formats for the CSV", "description": "Format of the Output Columns"}
   ]
 }
 ```
