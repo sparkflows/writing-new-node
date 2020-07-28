@@ -18,17 +18,26 @@
 package fire.nodes.examples;
 
 import fire.context.JobContext;
+import fire.mlmodels.FireMLModel;
+import fire.nodes.ml.ModelTrainingTimeUtil;
 import fire.nodes.ml.NodePredictor;
+import fire.output.OutputModel;
+import fire.output.OutputModelSummary;
 import fire.schemautil.SchemaUtil;
 import fire.util.parse.ParseDouble;
+import fireui.util.StringString;
 import org.apache.spark.ml.classification.LogisticRegression;
 import org.apache.spark.ml.classification.LogisticRegressionModel;
+import org.apache.spark.ml.classification.LogisticRegressionTrainingSummary;
 import org.apache.spark.ml.param.ParamMap;
 import org.apache.spark.ml.tuning.ParamGridBuilder;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class NodeTestLogisticRegression extends NodePredictor implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     public String rawPredictionCol; // The raw prediction (a.k.a. confidence) column name
     public String probabilityCol; //The Column name for predicted class conditional probabilities
@@ -38,11 +47,14 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
     public boolean fitIntercept; //Param for whether to fit an intercept term.
     public boolean standardization; //Param for whether to standardize the training features before fitting the model.
 
+    //@TODO: test all the parameters.
     public double elasticNetParam; //Param for the ElasticNet mixing parameter, in range [0, 1]. For alpha = 0, the penalty is an L2 penalty. For alpha = 1, it is an L1 penalty.
     public double tol; //convergence tolerance for iterative algorithms
 
     public double threshold; //threshold in binary classification prediction, in range [0, 1].
     public String weightCol; // weight column name. If this is not set or empty, we treat all instance weights as 1.0..
+
+    //@TODO: set thresholds value : discuss with jayanth
 
     // grid search parameters
     public String regParamGrid = null;
@@ -53,8 +65,6 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
     public NodeTestLogisticRegression(int i, String nm) {
         super(i, nm);
     }
-
-    //--------------------------------------------------------------------------------------
 
     public boolean passParamMapToNextNodes(JobContext jobContext, LogisticRegression lr) {
 
@@ -81,8 +91,6 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
 
         return result;
     }
-
-    //--------------------------------------------------------------------------------------
 
     @Override
     public void execute(JobContext jobContext) throws Exception {
@@ -129,7 +137,6 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
             lr.setThreshold(threshold);
         }
 
-        //--------------------------------------------------------------------------------------------------------------
 
         // pass pipeline stage
         boolean passedToPipeline = passPipelineStageToNextNodes(jobContext, lr);
@@ -145,21 +152,37 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
             return;
         }
 
-        //--------------------------------------------------------------------------------------------------------------
 
         if (dataFrame != null) {
-
+            ModelTrainingTimeUtil modelTrainTimeUtil = new ModelTrainingTimeUtil();
+            modelTrainTimeUtil.setStartModelTrain(System.currentTimeMillis());
             // fit the model
             LogisticRegressionModel model = lr.fit(dataFrame);
+            modelTrainTimeUtil.setEndModelTrain(System.currentTimeMillis());
+            // pass model
+            FireMLModel fireMLModel = passSparkMLModelToNextNodes(jobContext, model);
 
             // output the model
             String[] colNames = SchemaUtil.getColNamesForVectorAssembler(dataFrame, featuresCol);
             jobContext.workflowctx().outLogisticRegressionModel(this, colNames, model);
 
-            // pass model to the next nodes
-            //passModelToNextNodes(jobContext, model);
 
-            // pass dataframe to the next nodes
+            OutputModel outputModel = new OutputModel();
+            outputModel.algorithm = "Spark LogisticRegression";
+            outputModel.model_path = "";
+            outputModel.category = "Classification";
+            outputModel.features = outputModelFeatures(colNames);
+            outputModel.model_summary = getModelSummary(model);
+            outputModel.model_uuid = fireMLModel.uuid;
+            outputModel.ml_technology = FireMLModel.getFireModel(fireMLModel.type);
+            outputModel.train_metrics = getTrainMetrics();
+            outputModel.modelTraningTime = modelTrainTimeUtil.getModelTrainingTime();;
+            outputModel.title = "Logistic Regression Model";
+            outputModel.description = "Add description";
+
+            jobContext.workflowctx().outModel(this, outputModel);
+
+            // pass dataframe
             passDataFrameToNextNodes(jobContext, dataFrame);
         }
 
@@ -167,8 +190,51 @@ public class NodeTestLogisticRegression extends NodePredictor implements Seriali
         executeNextNodes(jobContext, dataFrame);
     }
 
-    //--------------------------------------------------------------------------------------
+    public String getModelSummary(LogisticRegressionModel model){
 
-    //--------------------------------------------------------------------------------------
+        LogisticRegressionTrainingSummary logisticRegressionTrainingSummary =  model.summary();
 
+        OutputModelSummary outputModelSummary = new OutputModelSummary();
+        outputModelSummary.contentType ="array";
+        ArrayList content = new ArrayList<>();
+        content.add(new StringString("MaxIter", String.valueOf(model.getMaxIter())));
+        content.add(new StringString("RegParam", String.valueOf(model.getRegParam())));
+        content.add(new StringString("ElasticNetParam", String.valueOf(model.getElasticNetParam())));
+        content.add(new StringString("FitIntercept", String.valueOf(model.getFitIntercept())));
+        content.add(new StringString("Standardization", String.valueOf(model.getStandardization())));
+        content.add(new StringString("Tol", String.valueOf(model.getTol())));
+        content.add(new StringString("Threshold", String.valueOf(+model.getThreshold())));
+        content.add(new StringString("Label Column", String.valueOf(logisticRegressionTrainingSummary.labelCol())));
+        outputModelSummary.contentArray= content;
+
+        return outputModelSummary.toJSON();
+    }
+
+    public String outputModelFeatures(String[] colNames){
+
+        String features = "";
+
+        String featuresColumns = "";
+        if (colNames != null) {
+            for (int i = 0; i < colNames.length; i++) {
+                if(i == colNames.length -1){
+                    featuresColumns += colNames[i] + " ";
+                }else{
+                    featuresColumns += colNames[i] + ", ";
+                }
+            }
+        }
+
+        return featuresColumns;
+    }
+
+    public String getTrainMetrics(){
+
+        OutputModelSummary outputModelSummary = new OutputModelSummary();
+        outputModelSummary.contentType ="array";
+        ArrayList content = new ArrayList<>();
+        outputModelSummary.contentArray= content;
+
+        return outputModelSummary.toJSON();
+    }
 }
