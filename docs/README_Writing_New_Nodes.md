@@ -1,8 +1,8 @@
-# Writing New Nodes in Java/Scala
+# Writing New Processors in Java/Scala
 
-New Nodes can be easily added for adding new functionality.
+New Processor can be easily added for adding new functionality.
 
-## Spark DataFrames
+## Apache Spark DataFrames
 
 Spark DataFrame is used to represent the distributed data in the Workflows. They are used to pass data from one node
 to another.
