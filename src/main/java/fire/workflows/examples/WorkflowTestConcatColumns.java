@@ -13,7 +13,7 @@ import fire.workflowengine.Workflow;
 import fire.workflowengine.WorkflowContext;
 import org.apache.spark.sql.SparkSession;
 
-public class WorkflowTest {
+public class WorkflowTestConcatColumns {
 
     public static void main(String[] args) {
 
@@ -61,7 +61,7 @@ public class WorkflowTest {
 
         // execute the workflow
         wf.execute(jobContext);
-        
+
     }
     
 }

@@ -16,7 +16,7 @@ The details for coding a New Node is here : https://github.com/sparkflows/writin
 
 Use the command below to run the example workflow locally.
 
-       java -cp target/writing-new-node-3.1.0-jar-with-dependencies.jar fire.workflows.examples.WorkflowTest
+       java -cp target/writing-new-node-3.1.0-jar-with-dependencies.jar fire.workflows.examples.WorkflowTestConcatColumns
 
 It would finally print the following values.
 
@@ -42,7 +42,7 @@ Below is the command to execute the example Workflow on an Apache Spark cluster.
 
 The parameter 'cluster' specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to 'local' or not specifying it.
 
-	spark-submit --master yarn --deploy-mode client --class fire.workflows.examples.WorkflowTest target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
+	spark-submit --master yarn --deploy-mode client --class fire.workflows.examples.WorkflowTestConcatColumns target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
 
 
 ### Display the example Node in Fire Insights and run it from there
