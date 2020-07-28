@@ -144,9 +144,9 @@ There are cases when we need the ability to Browse the HDFS/S3. For example when
 
 In the above having **'title'** of **'Path'** displays the Browse HDFS/S3 button using which the user is presented with a Dialog Box to browse the data in HDFS/S3.
 
-## Allow user to write sql query
+### SQL
 
-There are some scenario where user need to query sql data. In this case user can write sql query in query editor.
+There are some scenario where user need to write sql query in query editor.
 
 ```
 {
