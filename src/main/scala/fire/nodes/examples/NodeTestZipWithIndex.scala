@@ -22,19 +22,19 @@ class NodeTestZipWithIndex extends Node{
     this.indexColName = indexColName
   }
 
-    @Override
+  @Override
   override def execute(jobContext: JobContext): Unit = {
 
-  val sqlContext = jobContext.sqlctx()
+    val sqlContext = jobContext.sqlctx()
 
-  val newSchema = new StructType(dataFrame.schema.fields ++ Array(StructField(indexColName, LongType, false)))
-  // Zip on RDD level
-  val rddWithId = dataFrame.rdd.zipWithIndex
+    val newSchema = new StructType(dataFrame.schema.fields ++ Array(StructField(indexColName, LongType, false)))
+    // Zip on RDD level
+    val rddWithId = dataFrame.rdd.zipWithIndex
 
-  // Convert back to DataFrame
-  val dfZippedWithId =  jobContext.sqlctx.createDataFrame(rddWithId.map{ case (row, index) => Row.fromSeq(row.toSeq ++ Array(index))}, newSchema)
+    // Convert back to DataFrame
+    val dfZippedWithId =  jobContext.sqlctx.createDataFrame(rddWithId.map{ case (row, index) => Row.fromSeq(row.toSeq ++ Array(index))}, newSchema)
 
-  passDataFrameToNextNodesAndExecute(jobContext, dfZippedWithId)
+    passDataFrameToNextNodesAndExecute(jobContext, dfZippedWithId)
   }
 
   override def getOutputSchema(workflow: Workflow, inputSchema: FireSchema): FireSchema = {

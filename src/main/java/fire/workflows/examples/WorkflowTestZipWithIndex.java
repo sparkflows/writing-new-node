@@ -45,7 +45,7 @@ public class WorkflowTestZipWithIndex {
                 "numeric numeric numeric numeric");
         wf.addNode(structured);
 
-        // column filter node
+        // zip with index node
         NodeTestZipWithIndex nzip = new NodeTestZipWithIndex(2, "nzip");
         wf.addLink(structured, nzip);
 

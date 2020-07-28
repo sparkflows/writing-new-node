@@ -27,10 +27,8 @@ class NodeTestMovingAverage extends Node{
 
     dataFrame.show(false)
 
-
     val resultDF = dataFrame.withColumn(s"ma_$inputCol", avg(col(inputCol)).over(Window.orderBy(col(inputCol))rangeBetween(windowStart, windowEnd)))
 
-    resultDF.show(false)
     passDataFrameToNextNodesAndExecute(jobContext, resultDF)
 
   }

@@ -47,7 +47,7 @@ public class WorkflowTestMovingAverage {
                 "numeric numeric numeric numeric");
         wf.addNode(structured);
 
-        // column filter node
+        // moving average node
         NodeTestMovingAverage ntm = new NodeTestMovingAverage(2, "ntm");
         ntm.setInputCol("f2");
         wf.addLink(structured, ntm);
