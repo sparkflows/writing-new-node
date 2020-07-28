@@ -1,12 +1,11 @@
 # Processor/Node JSON & Widgets
 
-The Fire Insights UI allows specifying how the dialog box of any Processor would look like. Each Processor has a corresponding JSON file.
+The Fire Insights UI allows specifying how the dialog box of any Processor would look like. Each Processor has a corresponding json file.
 
-Below is the example of the JSON file for **'NodeConcatColumns'**. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
+Below is the example of **'NodeConcatColumns'**. A Processor can have various fields. How a field is represented in the UI is determined by the **widget** type.
+In the example, we see the following **widgets** used:
 
-In the example below, we see the following **widgets** used:
-
-- **variables** : Allows the user to select one more more variables from the incoming list of variables into the Node.
+- **variables** : Allows the user to select one or more variables from the incoming list of variables into the Node.
 - **textfield** : Allows the user to enter some text.
 
 
@@ -54,6 +53,16 @@ In the example below, we see the following **widgets** used:
 | variables_list_textfield  | Allows the user to enter an editable value  | {"name": "values", "value":"[]", "widget": "variables_list_textfield", "title": "Values", "description": "Values"} |
 | list_textfield  | Allows adding rows of values. Allows the user to enter an editable value for a list of fields  | {"name": "values", "value":"[]", "widget": "list_textfield", "title": "Values", "description": "Values"} |
 | list_array  | Displays a dropdown of columns from which the user can select  | {"name": "values", "value":"[]", "widget": "list_array", "title": "Values", "description": "Values"} |
+| array_of_values | Allow user to add/remove dynamic input textfield on button click | {"name":"tempTables", "value":"[]", "widget": "array_of_values", "title": "Temp Table Names", "description": "Temp Table Name to be used"} |
+| boolean | Allows user to select option true or false | {"name":"overwrite", "value":"false", "widget": "boolean","title": "Overwrite Output"} |
+| enum | Allows the user to select a value from the pre-defined map values (key:value) using a dropdown | {"name":"graphType", "value":"1", "widget": "enum", "title": "Chart Type", "optionsMap":{"LINECHART":"Line Chart","COLUMNCHART":"Side by Side Bar Chart", "BARCHART":"Stacked Bar Chart", "PIE":"Pie Chart", "SCATTERCHART": "Scatter Chart"}} |
+| object_array | Allows the user to select a object using a dropdown | {"name":"connection", "value":"", "widget": "object_array", "title": "Connection", "description": "The JDBC connection to connect" ,"required":"true"} |
+| variables_common | Allows the user to select one or more of the columns from the incoming schema | {"name":"joinCols", "value":"", "widget": "variables_common", "title": "Common Join Columns", "description": "Space separated list of columns on which to join"} |
+| datefield | Display calendar to select date | {"name":"toDateCol", "value":"2100-12-31", "widget": "datefield", "title": "To Date", "datatypes":["date"], "description": "Takes End Date in the form of yyyy-MM-dd"} |
+| key_array_join | Select left table column from dropdown to join | {"name": "leftTableJoinColumn", "value":"[]", "widget": "key_array_join",  "title": "LeftTableJoinColumn", "description": ""} |
+| value_array_join | Select right table column from dropdown to join | {"name": "rightTableJoinColumn", "value":"[]", "widget": "value_array_join", "title": "RightTableJoinColumn", "description": ""} |
+| sort_columns | Sort table columns | {"name": "sortColumnNames", "value":"[]", "widget": "sort_columns", "title": "Columns", "description": "Sort the Column Name"} |
+| textarea_large | Display query editor | {"name":"sql", "value":"", "widget": "textarea_large", "type": "sql", "title": "SQL", "description": "SQL to be run"} |
 
 ## Examples
 
@@ -127,63 +136,42 @@ In the example below, we see the following **widgets** used:
 }
 ```
 
-## Ability to Browse the HDFS
+## Ability to Browse the HDFS/AWS S3
 
-There are cases when we need the ability to Browse the HDFS. For example when the user has to select a file or directory on HDFS. This is enabled by the below example:
+There are cases when we need the ability to Browse the HDFS/S3. For example when the user has to select a file or directory on HDFS/S3. This is enabled by the below example:
 
     {"name":"path", "value":"", "widget": "textfield", "title": "Path", "description": "Path of the Text file/directory"}
 
-In the above having **'title'** of **'Path'** displays the Browse HDFS button using which the user is presented with a Dialog Box to browse the data in HDFS.
+In the above having **'title'** of **'Path'** displays the Browse HDFS/S3 button using which the user is presented with a Dialog Box to browse the data in HDFS/S3.
 
+## Allow user to write sql query
 
-## Refreshing a field powered by custom code in a Processor
-
-In some cases we need a field to be refreshed by custom code provided in a Processor. An example of it can be:
-
-- Selecting a database name from a given list. In this case the custom code in the Processor would be able to fetch the list of databases.
-- Selecting a table name from a given list.
-
-Below is the example of how the code in the Node/Processor look like. It returns an array of Strings which get displayed in the dialog box as a drop down.
-
-    @Override
-    public ArrayList<String> getValue1d(String valueOf) {
-
-        if (valueOf.toLowerCase().equals("dbtable")) {
-            ArrayList<String> result = new ArrayList<>();
-            result.add("sample_07");
-            result.add("sample_08");
-
-            return result;
-        }
-
-        return new ArrayList<String>();
-    }
-    
-
-The Processor JSON would look like below. For dbtable, we see the widget 'array_refresh' being used.
+There are some scenario where user need to query sql data. In this case user can write sql query in query editor.
 
 ```
 {
   "id": "11",
-  "name": "JDBC",
-  "description": "This node reads data from other databases using JDBC.",
-  "type": "dataset",
-  "nodeClass": "fire.nodes.dataset.NodeDatasetJDBC",
+  "name": "SQL",
+  "description": "This node runs the given SQL on the incoming DataFrame",
+  "input": "This type of node takes in a DataFrame and transforms it to another DataFrame",
+  "output": "This node runs the given SQL on the incoming DataFrame to generate the output DataFrame",
+  "hint": "Whenever the table is changed, go to Schema tab and Refresh the Schema",
+  "type": "transform",
+  "engine": "all",
+  "nodeClass": "fire.nodes.etl.NodeSQL",
   "fields" : [
-    {"name":"url", "value":"jdbc:postgresql:dbserver", "widget": "textfield", "title": "URL", "description": "The JDBC URL to connect to"},
+    {"name":"tempTable", "value":"fire_temp_table", "widget": "textfield", "title": "Temp Table", "description": "Temp Table Name to be used"},
+    {"name":"sql", "value":"", "widget": "textarea_large", "type": "sql", "title": "SQL", "description": "SQL to be run"},
 
-    {"name":"dbtable", "value":"", "widget": "array_refresh", "title": "DB Table",
-      "description": "The JDBC table that should be read. Note that anything that is valid in a FROM clause of a SQL query can be used. For example, instead of a full table you could also use a subquery in parentheses."},
+    {"name": "schema", "value":"", "widget": "tab", "title": "Schema"},
 
-    {"name":"driver", "value":"", "widget": "textfield", "title": "Driver",
-            "description": "The class name of the JDBC driver needed to connect to this URL"},
-
-    {"name":"outputColNames", "value":"[]", "widget": "schema_col_names", "title": "Column Names of the Table", "description": "Output Columns Names of the Table"},
-    {"name":"outputColTypes", "value":"[]", "widget": "schema_col_types", "title": "Column Types of the Table", "description": "Output Column Types of the Table"},
-    {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Column Formats", "description": "Output Column Formats"}
+    {"name":"outputColNames", "value":"[]", "widget": "schema_col_names", "title": "Output Column Names", "description": "Name of the Output Columns"},
+    {"name":"outputColTypes", "value":"[]", "widget": "schema_col_types", "title": "Output Column Types", "description": "Data Type of the Output Columns"},
+    {"name":"outputColFormats", "value":"[]", "widget": "schema_col_formats", "title": "Output Column Formats", "description": "Format of the Output Columns"}
   ]
 }
 ```
+
 
 
 
