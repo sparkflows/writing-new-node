@@ -42,7 +42,7 @@ Use the command below to load example data onto HDFS. It is used by the example 
 
 Below is the command to execute the example Workflow on an Apache Spark cluster. 
 
-The parameter 'cluster' specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to 'local' or not specifying it.
+The parameter 'cluster' specifies that we are running the workflow on a cluster as against locally. This greatly simplifies the development and debugging within the IDE by setting its value to 'local' or not specifying it (default value is local).
 
 	spark-submit --master yarn --deploy-mode client --class fire.workflows.examples.WorkflowTestConcatColumns target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
 
