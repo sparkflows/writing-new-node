@@ -16,7 +16,7 @@ The details for coding a New Node is here : https://github.com/sparkflows/writin
 
 Use the command below to run the example workflow locally.
 
-       java -cp target/writing-new-node-3.1.0-jar-with-dependencies.jar fire.workflows.examples.WorkflowTest
+       java -cp target/writing-new-node-3.1.0-jar-with-dependencies.jar fire.workflows.examples.WorkflowTestConcatColumns
 
 It would finally print the following values.
 
