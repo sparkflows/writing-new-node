@@ -8,9 +8,9 @@ With the steps below, you can check out the code for a sample custom processor, 
 
 ## Install the Fire jar to the local maven repository
 
-Writing new node depends on the Fire jar file. The Fire jar file provides the parent class for any new node. 
+Writing new node depends on the Fire Insights core jar file. This jar provides the parent class for any new node. 
 
-Use the command below to install  fire jar in your local maven repo. Use the appropriate Spark version.
+Use the command below to install fire core jar in your local maven repo. Use the appropriate Spark version.
 
     mvn install:install-file -Dfile=fire-spark_2.4-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.4-core  -Dversion=3.1.0 -Dpackaging=jar
     
