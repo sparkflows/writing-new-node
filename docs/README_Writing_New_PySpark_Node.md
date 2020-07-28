@@ -2,7 +2,7 @@
 
 `REQUIRES PYTHON  VERSION >= 3.6.0`
 
-- [Install Sparkflows](https://www.sparkflows.io/download)
+- [Install Fire Insights](https://www.sparkflows.io/download)
 
 - unzip jobs.zip to get the code
 ```
