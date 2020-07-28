@@ -36,7 +36,7 @@ Users can use these new processors like any other processor within Fire Insights
 - [Executing Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
 
 
-## Writing new Java/Scala Nodes
+## Writing new Processors in Java/Scala
 
 - [Writing New Java/Scala Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_Nodes.md)
 - [Node Class Hierarchy](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Class_Hierarchy.md)
