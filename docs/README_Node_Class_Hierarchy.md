@@ -1,17 +1,17 @@
 ## Class Hierarchy of Nodes
 
-Below is the Class Hierarchy of the Nodes
+Below is the Class Hierarchy of the Nodes. Only a few Nodes are captured below to give an overall idea.
 
 - Node : Base class for all nodes
-  - NodeETL : Base class for ETL nodes
-    - NodeRowFilter
-    - NodeColumnFilter
   - NodeDataset : Base class for all Dataset nodes
     - NodeDatasetUnstructured
       - NodeDatasetPDF
     - NodeDatasetStructured
     - NodeDatasetCSV
     - NodeDatasetAvro
+  - NodeETL : Base class for ETL nodes
+    - NodeRowFilter
+    - NodeColumnFilter
   - NodePipelineStage
     - NodeModeling
       - NodeEstimator
@@ -28,8 +28,7 @@ Below is the Class Hierarchy of the Nodes
     
     
     
-  The Class Hierarchy of the Spark Machine Learning Nodes resemble close to the corresponding Spark ML Classes.
+The Class Hierarchy of the Apache Spark Machine Learning Nodes resemble close to the corresponding Apache Spark ML Classes.
   
-  https://spark.apache.org/docs/2.1.0/api/java/org/apache/spark/ml/package-tree.html
-  
+https://spark.apache.org/docs/2.4.0/api/java/org/apache/spark/ml/package-tree.html  
   
