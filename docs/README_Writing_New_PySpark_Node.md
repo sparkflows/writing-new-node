@@ -45,7 +45,7 @@
     ./run-fire-server.sh restart
 ```
     
-#### NodeSamplePrintNRows
+## NodeSamplePrintNRows
 
 ```
 class NodeSamplePrintNRows(Node):
@@ -85,17 +85,17 @@ class NodeSamplePrintNRows(Node):
 }
 ```
 
-### Local development setup:
+## Local development setup:
 
 Check the `requirements.txt` to install all the required packages.
 
 `pip install -r requirements.txt`
 
-##### Step 1:
+#### Step 1:
             Import the fire pyspark as a project from `fire-3.1.0/dist/fire` to PyCharm(Any IDE).
             
             To make sure everything is setup, run the `run_from_file.py`, which executes the sample workflow end-to-end.    
-##### Step 2:
+#### Step 2:
             Create H2 db: ./create-h2-db.sh
             Start fire server: ./run-fire-server.sh start
             
