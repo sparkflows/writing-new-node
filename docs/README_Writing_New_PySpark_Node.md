@@ -2,15 +2,19 @@
 
 `REQUIRES PYTHON  VERSION >= 3.6.0`
 
-- [Install Fire Insights](https://www.sparkflows.io/download)
+Below are the steps for writing the new node in Python.
 
-- unzip jobs.zip to get the code
+## [Install Fire Insights](https://www.sparkflows.io/download)
+
+## unzip jobs.zip to get the code
+
 ```
     cd fire-3.1.0/dist
     unzip jobs.zip
 ```    
 
-- Create a new Class in python.
+## Create a new Class in python
+
 - Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
 
 - Write the __init__ method in it.
@@ -29,18 +33,24 @@
     
 ```
 
-- Place the python file for the new node under **fire/customnodes** or a new directory under fire
-- Update **fire/create_custom_node.py** to create the new Node of that class. Example below:
+## Place the python file for the new node under **fire/customnodes** or a new directory under fire
+
+## Update **fire/create_custom_node.py** to create the new Node of that class. Example below:
+
 ```
     if node_class == "fire.nodes.util.NodeSamplePrintFirstNRows":
         node = NodeSamplePrintNRows(nodeid, name, description, parameters_mapping)
 ```
-- Recreate new jobs.zip which includes the new Node
+
+## Recreate new jobs.zip which includes the new Node
+
 ```
     zip -r jobs.zip *
     chmod +x jobs.zip
 ```
-- Restart the fire server
+
+## Restart the fire server
+
 ```
     ./run-fire-server.sh restart
 ```
@@ -91,11 +101,11 @@ Check the `requirements.txt` to install all the required packages.
 
 `pip install -r requirements.txt`
 
-#### Step 1:
+### Step 1:
             Import the fire pyspark as a project from `fire-3.1.0/dist/fire` to PyCharm(Any IDE).
             
             To make sure everything is setup, run the `run_from_file.py`, which executes the sample workflow end-to-end.    
-#### Step 2:
+### Step 2:
             Create H2 db: ./create-h2-db.sh
             Start fire server: ./run-fire-server.sh start
             
