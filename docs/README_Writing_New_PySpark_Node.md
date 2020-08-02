@@ -6,14 +6,14 @@ Below are the steps for writing the new node in Python.
 
 ## [Install Fire Insights](https://www.sparkflows.io/download)
 
-## unzip jobs.zip to get the code
+## Unzip jobs.zip to get the code
 
 ```
     cd fire-3.1.0/dist
     unzip jobs.zip
 ```    
 
-## Create a new Class in python
+## Create a new class in Python
 
 - Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
 
