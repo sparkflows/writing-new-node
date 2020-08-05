@@ -27,9 +27,6 @@ Users can use these new processors like any other processor within Fire Insights
 - [JobContext and Workflow](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_JobContext.md)
 - [Workflow Parameters & Node Variables](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Node_Variables.md)
 
-## Writing new PySpark Nodes
-
-- [Writing new PySpark Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_PySpark_Node.md)
 
 ## Workflow
 
