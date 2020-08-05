@@ -51,7 +51,7 @@ Test it by writing a workflow similar to workflow_csv.py
 Copy the new nodee into the Fire Installation at .../fire-3.1.0/dist/fire_custom
 
 
-## Recreate new jobs.zip which includes the new Node
+## Recreate new jobs_custom.zip which includes the new Node
 
 ```
     zip -r jobs_custom.zip fire_custom
