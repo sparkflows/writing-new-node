@@ -19,3 +19,6 @@
 
 - Restart Fire Server with ./run-fire-server.sh start
 
+## Writing new PySpark Nodes
+
+- [Writing new PySpark Nodes](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_PySpark_Node.md)
