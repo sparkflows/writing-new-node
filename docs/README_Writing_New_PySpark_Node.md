@@ -15,11 +15,31 @@ Download and Install Fire Insights from:
 
 ## Install the dependencies 
 
-'pip install -r requirements.txt'
+```
+  pip install -r requirements.txt'
+```  
 
-## Write the new node 
+## Create a new class in Python
 
-Write the new node in .../python/fire/customnode
+- Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
+
+- Write the __init__ method in it.
+```
+    def __init__(self, id: int, name: str, description: str, parameters_mapping: dict):
+    (parameters_mapping provides the incoming parameters for the new node)
+```
+- Write the execute method in the new class
+```
+    def execute(self, job_context: JobContext):
+        self.execute_next_nodes(job_context, self.dataFrame)
+        
+    (It gets the JobContext as its argument)
+    (The variable dataFrame which is of type DataFrame has been populated by the incoming DataFrame into the node)
+    (The execute method would pass the new DataFrame created by the method to the next nodes)
+    
+```
+
+Copy the new node to .../python/fire/customnode
 
 ## Test it 
 
@@ -53,25 +73,7 @@ Copy the json files into nodes/etl
     ./run-fire-server.sh restart
 ```
 
-## Create a new class in Python
 
-- Extend it from the class **Node** or **NodeDataset**. When writing a Dataset node extend NodeDataset.
-
-- Write the __init__ method in it.
-```
-    def __init__(self, id: int, name: str, description: str, parameters_mapping: dict):
-    (parameters_mapping provides the incoming parameters for the new node)
-```
-- Write the execute method in the new class
-```
-    def execute(self, job_context: JobContext):
-        self.execute_next_nodes(job_context, self.dataFrame)
-        
-    (It gets the JobContext as its argument)
-    (The variable dataFrame which is of type DataFrame has been populated by the incoming DataFrame into the node)
-    (The execute method would pass the new DataFrame created by the method to the next nodes)
-    
-```
 
 ## Place the python file for the new node under **fire/customnodes** or a new directory under fire
 
@@ -83,10 +85,8 @@ Copy the json files into nodes/etl
 ```
 
 
-
-
     
-## NodeSamplePrintNRows
+# NodeSamplePrintNRows
 
 ```
 class NodeSamplePrintNRows(Node):
@@ -126,7 +126,7 @@ class NodeSamplePrintNRows(Node):
 }
 ```
 
-## Local development setup:
+# Local development setup:
 
 Check the `requirements.txt` to install all the required packages.
 
