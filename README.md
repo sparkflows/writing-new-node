@@ -13,13 +13,6 @@ Users can use these new processors like any other processor within Fire Insights
 <!--- https://github.com/sparkflows/sparkflows-stanfordcorenlp -->
 
 
-## Steps
-
-- [Checkout Code](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code.md)
-- [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
-- [Build and Execute Examples](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Build_Execute_Examples.md)
-- [Executing Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
-
 
 ## Reference Docs
 
