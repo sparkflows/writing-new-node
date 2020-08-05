@@ -12,8 +12,8 @@ Users can use these new processors like any other processor within Fire Insights
 
 <!--- https://github.com/sparkflows/sparkflows-stanfordcorenlp -->
 
-- [Writing New Java/Scala Nodes](./java_nodes/README.md)
-- [Writing New Python Nodes](./python_nodes/README.md)
+- [Writing New Java/Scala Nodes](./java-nodes/README.md)
+- [Writing New Python Nodes](./python-nodes/README.md)
 
 
 ## Reference Docs
