@@ -13,22 +13,45 @@ Download and Install Fire Insights from:
   
 ## Check out this Repo
 
-## Install the dependencies with 'pip install -r requirements.txt'
+## Install the dependencies 
 
-## Write your new node in .../python/fire/customnode
+'pip install -r requirements.txt'
 
-## Test it by writing a workflow similar to workflow_csv.py
+## Write the new node 
+
+Write the new node in .../python/fire/customnode
+
+## Test it 
+
+Test it by writing a workflow similar to workflow_csv.py
 
 
-## Drop your new node into Fire Installation at .../fire-3.1.0/dist/fire_custom
+## Deploy the new node 
 
-## Create the new jobs_custom.zip with 'zip -r jobs_custom.zip fire_custom'
+Copy the new nodee into the Fire Installation at .../fire-3.1.0/dist/fire_custom
 
-## Create the json file for your new node
 
-## Drop the json files into nodes/etl
+## Recreate new jobs.zip which includes the new Node
 
-## Restart Fire Server with ./run-fire-server.sh start
+```
+    zip -r jobs_custom.zip fire_custom
+    chmod +x jobs.zip
+```
+
+## Create json file 
+
+Create the JSON file for your new node
+
+## Deploy JSON
+
+Copy the json files into nodes/etl
+
+
+## Restart the fire server
+
+```
+    ./run-fire-server.sh restart
+```
 
 ## Create a new class in Python
 
@@ -59,18 +82,9 @@ Download and Install Fire Insights from:
         node = NodeSamplePrintNRows(nodeid, name, description, parameters_mapping)
 ```
 
-## Recreate new jobs.zip which includes the new Node
 
-```
-    zip -r jobs.zip *
-    chmod +x jobs.zip
-```
 
-## Restart the fire server
 
-```
-    ./run-fire-server.sh restart
-```
     
 ## NodeSamplePrintNRows
 
