@@ -13,7 +13,7 @@ The layout of this Repository is defined here:
 
 ## Steps for Building & Executing the Examples here
 
-- [Checkout Code](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code.md)
+- [Checkout Code, Install Fire Core Jar](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code.md)
 - [Build and Execute Examples](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Build_Execute_Examples.md)
 - [Executing Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
 
