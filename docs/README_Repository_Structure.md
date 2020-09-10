@@ -5,7 +5,7 @@ Below is the structure of the repository.
 * **fire-*-core-3.1.0.jar**
     * Fire core jar which contains the fire Nodes and Workflow engine
 * **data**
-    * Sample data files
+    * Sample data files to be used for testing the new Nodes
 * **src/main/java/fire/nodes/examples**
     * Code for example Nodes of various types
 * **src/main/java/fire/workflows/examples/WorkflowTest.java**
