@@ -1,6 +1,6 @@
-## Directory Contents
+## Repository Structure
 
-Below is the contents of the directory.
+Below is the structure of the repository.
 
 * **fire-*-core-3.1.0.jar**
     * Fire core jar which contains the fire Nodes and Workflow engine
