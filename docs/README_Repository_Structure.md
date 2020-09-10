@@ -15,6 +15,6 @@ Below is the structure of the repository.
 * **testprintnrows.json**
     * JSON file for the example node **fire.nodes.examples.NodeTestPrintFirstNRows**
 * **README.md**
-    * README file which provides the steps of execution.
+    * README file which provides the details of writing a new node
 
 
