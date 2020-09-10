@@ -4,11 +4,11 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 
 Users can use these new processors like any other processor within Fire Insights. This repository contains a few sample processors to get you started.
 
-## Directory Structure
+## Repository Structure
 
 The layout of this Repository is defined here:
 
-- [Directory Structure](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
+- [Repository Structure](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Repository_Structure.md)
 
 
 ## Steps
