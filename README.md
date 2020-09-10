@@ -8,7 +8,7 @@ Users can use these new processors like any other processor within Fire Insights
 
 The layout of this Repository is defined here:
 
-- [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
+- [Directory Structure](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
 
 
 ## Steps
