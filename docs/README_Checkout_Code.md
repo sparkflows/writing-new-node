@@ -15,20 +15,4 @@ Use the command below to install fire core jar in your local maven repo. Use the
     cd writing-new-node
     mvn install:install-file -Dfile=fire-spark_2.4-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.4-core  -Dversion=3.1.0 -Dpackaging=jar
     
-## Development
-
-You can use IntelliJ or Scala IDE for Eclipse for your development. Feel free to use any other tool of your choice.
-
-### Developing with IntelliJ
-
-IntelliJ can be downloaded from https://www.jetbrains.com/idea/
-
-    Add the scala plugin into IntelliJ.
-    Import writing-new-node as a Maven project into IntelliJ.
-
-### Developing with Scala IDE for Eclipse
-
-Scala IDE for Eclipse can be downloaded from http://scala-ide.org/
-
-    Import fire-examples as a Maven project into Eclipse.
 
