@@ -4,34 +4,16 @@ In Fire Insights, you can write your own processor in Apache Spark and plug them
 
 Users can use these new processors like any other processor within Fire Insights. This repository contains a few sample processors to get you started.
 
-<!--- # For more examples on writing nodes in Sparkflows, refer: -->
+## Directory Structure
 
-<!--- https://github.com/sparkflows/sparkflows-stanfordcorenlp -->
+The layout of this Repository is defined here:
 
-<!--- 
- This should be the structure: 
-  Step 1:  Check out from git - Just include checking out and installing jar/code
-      - move content from Developing with IntelliJ/Scala IDE for Eclipse here
-      - Move building and deploying to step 6
-  Step 2: Copy " Directory Contents" and explain the contents
-  Step 3: Explain node hierarchy including a hierarchy diagram 
-  Step 4: Creating new node 
-         - Creating new connectors node 
-            - Creating JSON  - show real JSON code in help - add more comments to code 
-            - Creating node implementation - show real JSON code in help - add more comments to code 
-            - Creating node rules - show real JSON code in help - add more comments to code 
-         - Creating new processor node 
-             - Follow same structure as connector node
-         - Creating new Machine learning node 
-            - Follow same structure as connector node
- Step 5: Running Test workflow to test node 
- Step 6: Deploying your new node
---> 
+- [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
+
 
 ## Steps
 
 - [Checkout Code](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Checkout_Code.md)
-- [Directory Contents](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Directory_Contents.md)
 - [Build and Execute Examples](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Build_Execute_Examples.md)
 - [Executing Workflow JSON With Spark Submit](https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Running_Workflow_JSON_With_Spark_Submit.md)
 
