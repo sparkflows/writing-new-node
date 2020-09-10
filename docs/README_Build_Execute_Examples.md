@@ -43,9 +43,9 @@ The parameter 'cluster' specifies that we are running the workflow on a cluster 
 	spark-submit --master yarn --deploy-mode client --class fire.workflows.examples.WorkflowTestConcatColumns target/writing-new-node-3.1.0-jar-with-dependencies.jar cluster
 
 
-### Display the example Node in Fire Insights and run it from there
+### Deploying the example Node into Fire Insights
 
-New nodes written can be made visible in the Fire Insights UI. Thus, the users can start using them immediately.
+New nodes written can be deployed into Fire Insights. Thus, the users can start using them from Fire Insights UI.
 
 * Copy the **writing-new-node-3.1.0.jar** to **fire-user-lib** directory of the sparkflows install
 * Copy **testprintnrows.json** to the **nodes** directory under sparkflows install
