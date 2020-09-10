@@ -10,10 +10,6 @@ Building this repo generates the following jar files:
 	target/writing-new-node-3.1.0.jar
 	target/writing-new-node-3.1.0-jar-with-dependencies.jar
 
-The details for coding a New Processor is at:
-
-  * https://github.com/sparkflows/writing-new-node/blob/master/docs/README_Writing_New_Nodes.md
-
 ### Running the workflow locally
 
 Use the command below to run the example workflow locally.
