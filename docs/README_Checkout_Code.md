@@ -12,6 +12,7 @@ Writing new node depends on the Fire Insights core jar file. This jar provides t
 
 Use the command below to install fire core jar in your local maven repo. Use the appropriate Spark version.
 
+    cd writing-new-node
     mvn install:install-file -Dfile=fire-spark_2.4-core-3.1.0.jar -DgroupId=fire  -DartifactId=fire-spark_2.4-core  -Dversion=3.1.0 -Dpackaging=jar
     
 ## Development
