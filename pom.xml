@@ -26,6 +26,12 @@
       <version>3.1.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>fire</groupId>
+      <artifactId>xml-parser</artifactId>
+      <version>1.0</version>
+    </dependency>
+
     <dependency> <!-- Spark dependency -->
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_2.12</artifactId>
