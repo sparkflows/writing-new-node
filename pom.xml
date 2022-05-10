@@ -28,7 +28,7 @@
 
     <dependency>
       <groupId>fire</groupId>
-      <artifactId>xml-parser</artifactId>
+      <artifactId>xml-parse</artifactId>
       <version>1.0</version>
     </dependency>
 
