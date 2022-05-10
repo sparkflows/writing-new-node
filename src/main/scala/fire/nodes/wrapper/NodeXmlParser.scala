@@ -10,8 +10,6 @@ import org.apache.spark.sql.SparkSession
 
 class NodeXmlParserextends extends Node {
 
-  @BeanProperty var indexColName = "rowid"
-
   @BeanProperty var pipelineName = "xml-parse"
   @BeanProperty var inputXmlLocation = "data/input"
   @BeanProperty var rowTag =  "TS_270"
@@ -23,12 +21,7 @@ class NodeXmlParserextends extends Node {
   this ()
   id = i
   name = nme
-}
-
-  def this (i: Int, nme: String, indexColName: String) {
-  this (i, nme)
-  this.indexColName = indexColName
-}
+ }
 
   @Override
   override def execute (jobContext: JobContext): Unit = {
@@ -46,5 +39,5 @@ class NodeXmlParserextends extends Node {
     xmlParser.performParse(spark)
 
   passDataFrameToNextNodesAndExecute (jobContext, dataFrame)
-}
+ }
 }

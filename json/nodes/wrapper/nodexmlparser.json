@@ -1,0 +1,20 @@
+{
+  "id": "10",
+  "name": "XMLParser",
+  "description": "",
+  "type": "transform",
+  "nodeClass": "fire.nodes.examples.NodeTestMovingAverage",
+  "fields" : [
+    {"name":"pipelineName", "value":"", "widget": "textfield", "title": "PipelineName"},
+
+    {"name":"inputXmlLocation", "value":"", "widget": "textfield", "title": "Path"},
+
+    {"name":"rowTag", "value":"", "widget": "textfield", "title": "RowTag"},
+
+    {"name":"outputFormat", "value":"json", "widget": "array", "title": "OutputFormat","optionsArray": ["json","parquet"]},
+
+    {"name":"outPartitionColumns", "value":"", "widget": "textfield", "title": "OutPartitionColumns"},
+
+    {"name":"outputLocation", "value":"", "widget": "textfield", "title": "OutputLocation"}
+  ]
+}
