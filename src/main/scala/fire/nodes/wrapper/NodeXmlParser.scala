@@ -8,7 +8,7 @@ import fire.workflowengine.Node
 import org.apache.spark.sql.SparkSession
 
 
-class NodeXmlParserextends extends Node {
+class NodeXmlParser extends Node {
 
   @BeanProperty var pipelineName = "xml-parse"
   @BeanProperty var inputXmlLocation = "data/input"

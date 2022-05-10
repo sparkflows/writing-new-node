@@ -3,7 +3,7 @@
   "name": "XMLParser",
   "description": "",
   "type": "transform",
-  "nodeClass": "fire.nodes.examples.NodeTestMovingAverage",
+  "nodeClass": "fire.nodes.wrapper.NodeXmlParser",
   "fields" : [
     {"name":"pipelineName", "value":"", "widget": "textfield", "title": "PipelineName"},
 
