@@ -17,7 +17,7 @@ protobuf==3.8.0
 ptpython==2.0.4      
 py4j==0.10.4         
 Pygments==2.3.1      
-pyspark==2.1.2       
+pyspark==3.2.2       
 scikit-learn==0.21.3 
 six==1.12.0          
 termcolor==1.1.0     
